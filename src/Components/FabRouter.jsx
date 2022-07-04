@@ -14,7 +14,11 @@ function FabRouter() {
         to={'/'}
         className={`fabIconContainer ${pathname === '/' && 'selected'}`}
       >
-        <AiFillHome size={23} className='fabIcon' color='var(--fabIconColor)' />
+        <AiFillHome
+          size={23}
+          className={`${pathname === '/' && 'fabIcon'}`}
+          color='var(--fabIconColor)'
+        />
       </Link>
       <Link
         to={'/contact-me'}
@@ -22,13 +26,21 @@ function FabRouter() {
           pathname === '/contact-me' && 'selected'
         }`}
       >
-        <MdMail size={23} className='fabIcon' color='var(--fabIconColor)' />
+        <MdMail
+          size={23}
+          className={`${pathname === '/contact-me' && 'fabIcon'}`}
+          color='var(--fabIconColor)'
+        />
       </Link>
       <Link
         to={'/about'}
         className={`fabIconContainer ${pathname === '/about' && 'selected'}`}
       >
-        <FaInfo size={23} className='fabIcon' color='var(--fabIconColor)' />
+        <FaInfo
+          size={23}
+          className={`${pathname === '/about' && 'fabIcon'}`}
+          color='var(--fabIconColor)'
+        />
       </Link>
     </div>
   )

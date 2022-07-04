@@ -1,7 +1,11 @@
 [data-theme='dark'] {
+  --theme: #00fbb5;
   --background: #1c1a1b;
   --fabIconColor: #ffffff;
   --fabBoxShadow: inset -20px -20px 16px #151415, inset 20px 20px 16px #232021;
-  --fabBoxShadowSelected: inset -20px -20px 16px #212a26,
-    inset 20px 20px 16px #00fbb5;
+  --textColor: #ffffff;
+  --themeTextColor: #00fbb5;
+  --themeInput: #3e3e3e85;
+  --subtext: #a5a5a5;
+  --inputPlaceholder: #a5a5a5;
 }
