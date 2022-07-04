@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import AppRoutes from './routes'
 
 function App() {
-  const { isDark, toggleTheme } = useContext(ThemeContext)
+  const { isDark } = useContext(ThemeContext)
 
   return (
     <div data-theme={!isDark && 'dark'} className='app themeBackground'>
