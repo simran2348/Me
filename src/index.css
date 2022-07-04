@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  position: relative;
+}
+
+.themeBackground {
+  background-color: var(--background);
+}
+
+.fabRouter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fabIconContainer {
+  width: 44px;
+  height: 44px;
+  margin: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--fabBoxShadow);
+  border-radius: 5rem;
+}
+
+.fabIcon {
+}
+
+.selected {
+  box-shadow: var(--fabBoxShadowSelected);
+}
+
+@media (max-width: 768px) {
+  .fabRouter {
+    display: none;
+  }
+}
