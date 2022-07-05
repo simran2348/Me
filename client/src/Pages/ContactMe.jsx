@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import TextInput from '../Shared/TextInput'
+import { sendMessage } from '../Middleware/Actions'
+import { connect } from 'react-redux'
 
-function ContactMe() {
+function ContactMe({ sendMessage }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,7 +19,7 @@ function ContactMe() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
+    sendMessage(formData)
     setFormData({
       name: '',
       email: '',
@@ -74,4 +76,4 @@ function ContactMe() {
   )
 }
 
-export default ContactMe
+export default connect(null, { sendMessage })(ContactMe)

@@ -17,7 +17,7 @@ app.use(cors())
 app.use(express.urlencoded({ limit: '50mb' }))
 
 //Define Routes
-app.use('/api/send', require('./routes/contactRoute'))
+app.use('/api/contact', require('./routes/contactRoute'))
 
 //serve static assets in production
 if (process.env.NODE_ENV === 'production') {
