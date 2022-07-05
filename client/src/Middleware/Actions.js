@@ -3,6 +3,7 @@ import {
   CONTACT_RECIEVE,
   CONTACT_REQUEST
 } from './ActionTypes'
+import axios from 'axios'
 
 export const sendMessage = (payload) => async (dispatch) => {
   dispatch({
@@ -12,7 +13,15 @@ export const sendMessage = (payload) => async (dispatch) => {
   try {
     const { name, email, message } = payload
 
-    console.log({ name, email, message })
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+
+    const body = JSON.stringify({ name, email, message })
+
+    await axios.post('/api/contact/send', body, config)
 
     dispatch({
       type: CONTACT_RECIEVE

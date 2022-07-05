@@ -6,6 +6,7 @@ import {
 
 const contactInitialState = {
   loading: false,
+  success: false,
   error: {}
 }
 
@@ -21,13 +22,15 @@ export const contactReducer = (state = contactInitialState, action) => {
     case CONTACT_RECIEVE:
       return {
         ...state,
-        loading: false
+        loading: false,
+        success: true
       }
     case CONTACT_FAILURE:
       return {
         ...state,
         loading: false,
-        error: payload
+        error: payload,
+        success: false
       }
     default:
       return state

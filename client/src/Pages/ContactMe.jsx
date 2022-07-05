@@ -2,8 +2,9 @@ import { useState } from 'react'
 import TextInput from '../Shared/TextInput'
 import { sendMessage } from '../Middleware/Actions'
 import { connect } from 'react-redux'
+import { useEffect } from 'react'
 
-function ContactMe({ sendMessage }) {
+function ContactMe({ sendMessage, isLoading, isSuccess }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,12 +20,13 @@ function ContactMe({ sendMessage }) {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    sendMessage(formData)
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    })
+    sendMessage(formData).then(
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      })
+    )
   }
 
   const { name, email, message } = formData
@@ -68,7 +70,7 @@ function ContactMe({ sendMessage }) {
         />
         <div className='submitButtonContainer'>
           <button className='button buttonTheme' type='submit'>
-            SEND MESSAGE
+            {isLoading ? 'PENDING' : 'SEND MESSAGE'}
           </button>
         </div>
       </form>
@@ -76,4 +78,9 @@ function ContactMe({ sendMessage }) {
   )
 }
 
-export default connect(null, { sendMessage })(ContactMe)
+const mapStateToProps = (state) => ({
+  isLoading: state.contactReducer.loading,
+  isSuccess: state.contactReducer.success
+})
+
+export default connect(mapStateToProps, { sendMessage })(ContactMe)
