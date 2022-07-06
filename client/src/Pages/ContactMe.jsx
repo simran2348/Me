@@ -3,6 +3,7 @@ import TextInput from '../Shared/TextInput'
 import { sendMessage } from '../Middleware/Actions'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
+import RippleButton from '../Shared/RippleButton'
 
 function ContactMe({ sendMessage, isLoading, isSuccess }) {
   const [formData, setFormData] = useState({
@@ -68,11 +69,7 @@ function ContactMe({ sendMessage, isLoading, isSuccess }) {
           placeholder='Type your message here...'
           textarea
         />
-        <div className='submitButtonContainer'>
-          <button className='button buttonTheme' type='submit'>
-            {isLoading ? 'PENDING' : 'SEND MESSAGE'}
-          </button>
-        </div>
+        <RippleButton isLoading={isLoading} label='send message' />
       </form>
     </div>
   )
