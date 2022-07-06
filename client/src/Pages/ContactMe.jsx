@@ -2,7 +2,6 @@ import { useState } from 'react'
 import TextInput from '../Shared/TextInput'
 import { sendMessage } from '../Middleware/Actions'
 import { connect } from 'react-redux'
-import { useEffect } from 'react'
 import RippleButton from '../Shared/RippleButton'
 
 function ContactMe({ sendMessage, isLoading, isSuccess }) {
