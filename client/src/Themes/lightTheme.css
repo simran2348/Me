@@ -10,4 +10,5 @@
   --inputPlaceholder: #da5724;
   --rippleColor: rgb(78, 78, 78);
   --swiperBackground: #ffd3aa;
+  --profilePicShadow: 0px 5px 15px -5px var(--theme);
 }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Hammer from 'react-hammerjs'
 import { useState } from 'react'
-import { MoonImage, SunImage } from '../Assets/index'
+import { MoonImage, SunImage, ProfileImage } from '../Assets/index'
 
 function FabRouter({ isDark, toggleTheme }) {
   const location = useLocation()
@@ -73,15 +73,6 @@ function FabRouter({ isDark, toggleTheme }) {
         <div className='swiperArea' />
       </Hammer>
       <div className={`swiper ${visible && 'swiperVisible'}`}>
-        {pageLinks.map((item) => (
-          <Link
-            to={item.path}
-            className={`menuLink ${item.selected && 'menuLinkSelected'}`}
-            onClick={handleSwipe}
-          >
-            {item.label}
-          </Link>
-        ))}
         <div className='themeController'>
           <img
             src={MoonImage}
@@ -95,6 +86,23 @@ function FabRouter({ isDark, toggleTheme }) {
             className={`themeIcon ${!isDark ? 'appear' : 'dissappear'}`}
             onClick={toggleTheme}
           />
+        </div>
+        <div className='swiperProfile'>
+          <div
+            className='profilePic'
+            style={{ backgroundImage: `url(${ProfileImage})` }}
+          ></div>
+          <div className='linkItems'>
+            {pageLinks.map((item) => (
+              <Link
+                to={item.path}
+                className={`menuLink ${item.selected && 'menuLinkSelected'}`}
+                onClick={handleSwipe}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </>
