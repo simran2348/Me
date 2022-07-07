@@ -1,7 +1,8 @@
 import {
   CONTACT_FAILURE,
   CONTACT_RECIEVE,
-  CONTACT_REQUEST
+  CONTACT_REQUEST,
+  RESET_CONTACT_STATE
 } from './ActionTypes'
 
 const contactInitialState = {
@@ -31,6 +32,13 @@ export const contactReducer = (state = contactInitialState, action) => {
         loading: false,
         error: payload,
         success: false
+      }
+    case RESET_CONTACT_STATE:
+      return {
+        ...state,
+        loading: false,
+        success: false,
+        error: {}
       }
     default:
       return state

@@ -11,4 +11,6 @@
   --rippleColor: rgb(78, 78, 78);
   --swiperBackground: #000000;
   --profilePicShadow: 0px 0px 0px 0px var(--theme);
+  --appToastBackground: rgb(54, 54, 54);
+  --appToastTextColor: #ffffff;
 }

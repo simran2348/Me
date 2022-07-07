@@ -1,10 +1,18 @@
-import { useState } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from 'react'
 import TextInput from '../Shared/TextInput'
 import { sendMessage } from '../Middleware/Actions'
 import { connect } from 'react-redux'
 import RippleButton from '../Shared/RippleButton'
+import { contactSubtext } from '../constants'
+import { useDispatch } from 'react-redux'
+import { RESET_CONTACT_STATE } from '../Middleware/ActionTypes'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function ContactMe({ sendMessage, isLoading, isSuccess }) {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,14 +28,18 @@ function ContactMe({ sendMessage, isLoading, isSuccess }) {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    sendMessage(formData).then(
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      })
-    )
+    sendMessage(formData)
   }
+
+  useEffect(() => {
+    if (isSuccess) {
+      dispatch({
+        type: RESET_CONTACT_STATE
+      })
+      toast.success('Message Sent !!!')
+      navigate('/')
+    }
+  }, [isSuccess])
 
   const { name, email, message } = formData
   return (
@@ -35,10 +47,7 @@ function ContactMe({ sendMessage, isLoading, isSuccess }) {
       <div className='title'>
         Let's <span className='themeText'>Talk</span>
       </div>
-      <div className='subText'>
-        Have a job opportunity or want to talk, contact me directly and fill out
-        the form, and i will get back to you soon.
-      </div>
+      <div className='subText'>{contactSubtext}</div>
       <form onSubmit={onSubmit} className='contactForm'>
         <TextInput
           type='text'

@@ -11,6 +11,19 @@ body {
   overflow: auto;
 }
 
+.appToastContainer {
+  z-index: 0 !important;
+}
+
+.appToast {
+  background: var(--appToastBackground) !important;
+}
+
+.appToastBody {
+  color: var(--appToastTextColor);
+  font-weight: bold;
+}
+
 .themeBackground {
   background-color: var(--background);
 }
@@ -48,12 +61,12 @@ body {
 
 .contactContainer {
   max-width: 360px;
-  height: 100%;
+  height: max-content;
   margin: auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 4rem;
 }
 
 .title {

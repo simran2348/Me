@@ -7,6 +7,5 @@ export const linkedLink =
 export const instagramLink = 'https://www.instagram.com/simranjits_97/'
 export const facebookLink = ''
 export const twitterLink = ''
-export const contactTitle = `Let's Talk`
 export const contactSubtext =
   'Have a job opportunity or want to talk, contact me directly and fill out the form, and i will get back to you soon.'
