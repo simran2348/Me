@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Hammer from 'react-hammerjs'
 import { useState } from 'react'
+import { MoonImage, SunImage } from '../Assets/index'
 
-function FabRouter() {
+function FabRouter({ isDark, toggleTheme }) {
   const location = useLocation()
   const { pathname } = location
   const [visible, setVisible] = useState(false)
@@ -81,6 +82,20 @@ function FabRouter() {
             {item.label}
           </Link>
         ))}
+        <div className='themeController'>
+          <img
+            src={MoonImage}
+            alt='moon'
+            className={`themeIcon ${isDark ? 'appear' : 'dissappear'}`}
+            onClick={toggleTheme}
+          />
+          <img
+            src={SunImage}
+            alt='sun'
+            className={`themeIcon ${!isDark ? 'appear' : 'dissappear'}`}
+            onClick={toggleTheme}
+          />
+        </div>
       </div>
     </>
   )

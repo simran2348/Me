@@ -1,12 +1,13 @@
 [data-theme='dark'] {
-  --theme: #00fbb5;
+  --theme: #da5724;
   --background: #1c1a1b;
   --fabIconColor: #ffffff;
-  --fabBoxShadow: inset -20px -20px 16px #151415, inset 20px 20px 16px #232021;
+  --fabBoxShadow: 6px 6px 13px #131112, -6px -6px 13px #252324;
   --textColor: #ffffff;
-  --themeTextColor: #00fbb5;
+  --themeTextColor: #da5724;
   --themeInput: #3e3e3e85;
   --subtext: #a5a5a5;
   --inputPlaceholder: #a5a5a5;
   --rippleColor: rgb(78, 78, 78);
+  --swiperBackground: #000000;
 }

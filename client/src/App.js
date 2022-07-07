@@ -7,13 +7,13 @@ import { Provider } from 'react-redux'
 import store from './store'
 
 function App() {
-  const { isDark } = useContext(ThemeContext)
+  const { isDark, toggleTheme } = useContext(ThemeContext)
 
   return (
     <Provider store={store}>
-      <div data-theme={!isDark && 'dark'} className='app themeBackground'>
+      <div data-theme={isDark && 'dark'} className='app themeBackground'>
         <Router>
-          <FabRouter />
+          <FabRouter isDark={isDark} toggleTheme={toggleTheme} />
           <AppRoutes />
         </Router>
       </div>

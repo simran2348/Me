@@ -33,6 +33,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: var(--fabBoxShadow);
+  background: var(--background);
   border-radius: 5rem;
 }
 
@@ -225,7 +226,7 @@ body {
     top: 0;
     right: -250px;
     transition: 0.2s linear;
-    background-color: black;
+    background-color: var(--swiperBackground);
     z-index: 9;
     display: flex;
     flex-direction: column;
@@ -248,5 +249,51 @@ body {
 
   .menuLinkSelected {
     box-shadow: inset 3px 0 0 0 var(--theme);
+  }
+
+  .themeController {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 75px;
+    width: 100%;
+  }
+
+  .themeIcon {
+    position: absolute;
+    transform: translate(-15px, 0px);
+  }
+
+  .appear {
+    animation: dawn 0.5s ease-in-out;
+    opacity: 1;
+  }
+
+  .dissappear {
+    animation: dusk 0.5s ease-in-out;
+    opacity: 0;
+  }
+}
+
+@keyframes dawn {
+  from {
+    transform: translate(85px, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-15px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes dusk {
+  from {
+    transform: translate(-15px, 0px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-100px, 100px);
+    opacity: 0;
   }
 }
