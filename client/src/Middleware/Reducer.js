@@ -8,11 +8,11 @@ import {
 const contactInitialState = {
   loading: false,
   success: false,
-  error: {}
+  error: false
 }
 
 export const contactReducer = (state = contactInitialState, action) => {
-  const { type, payload } = action
+  const { type } = action
 
   switch (type) {
     case CONTACT_REQUEST:
@@ -30,7 +30,7 @@ export const contactReducer = (state = contactInitialState, action) => {
       return {
         ...state,
         loading: false,
-        error: payload,
+        error: true,
         success: false
       }
     case RESET_CONTACT_STATE:
@@ -38,7 +38,7 @@ export const contactReducer = (state = contactInitialState, action) => {
         ...state,
         loading: false,
         success: false,
-        error: {}
+        error: false
       }
     default:
       return state

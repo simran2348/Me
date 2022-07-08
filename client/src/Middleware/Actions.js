@@ -28,8 +28,7 @@ export const sendMessage = (payload) => async (dispatch) => {
     })
   } catch (error) {
     dispatch({
-      type: CONTACT_FAILURE,
-      payload: error
+      type: CONTACT_FAILURE
     })
   }
 }

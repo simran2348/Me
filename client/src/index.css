@@ -11,6 +11,11 @@ body {
   overflow: auto;
 }
 
+.container {
+  margin: 0 70px;
+  color: var(--textColor);
+}
+
 .appToastContainer {
   z-index: 0 !important;
 }
@@ -203,6 +208,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+
   .fabRouter {
     display: none;
   }
@@ -268,7 +277,7 @@ body {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 40px;
+    top: 70px;
     right: 0;
     height: max-content;
     width: 100%;
@@ -294,12 +303,12 @@ body {
   .swiperProfile {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 130px;
   }
 
-  .profilePic {
-    height: 130px;
-    width: 130px;
+  .profilePicMobile {
+    height: 150px;
+    width: 150px;
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,6 +320,85 @@ body {
 
   .linkItems {
     margin-top: 3rem;
+  }
+
+  .fabRouterMobile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  #hanburgerIcon {
+    width: 45px;
+    height: 45px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  #hanburgerIcon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 80%;
+    background: var(--theme);
+    border-radius: 10px;
+    opacity: 1;
+    left: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  #hanburgerIcon span:nth-child(1) {
+    top: 0px;
+  }
+
+  #hanburgerIcon span:nth-child(2),
+  #hanburgerIcon span:nth-child(3) {
+    top: 10px;
+  }
+
+  #hanburgerIcon span:nth-child(4) {
+    top: 20px;
+  }
+
+  #hanburgerIcon.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #hanburgerIcon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #hanburgerIcon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #hanburgerIcon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
   }
 }
 

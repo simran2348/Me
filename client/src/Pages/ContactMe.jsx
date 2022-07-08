@@ -10,7 +10,7 @@ import { RESET_CONTACT_STATE } from '../Middleware/ActionTypes'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
-function ContactMe({ sendMessage, isLoading, isSuccess }) {
+function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
@@ -33,13 +33,23 @@ function ContactMe({ sendMessage, isLoading, isSuccess }) {
 
   useEffect(() => {
     if (isSuccess) {
+      toast.success('Message Sent !!!')
       dispatch({
         type: RESET_CONTACT_STATE
       })
-      toast.success('Message Sent !!!')
       navigate('/')
     }
   }, [isSuccess])
+
+  useEffect(() => {
+    if (isError) {
+      toast.error('Oops! Please try after sometime')
+      dispatch({
+        type: RESET_CONTACT_STATE
+      })
+      navigate('/')
+    }
+  }, [isError])
 
   const { name, email, message } = formData
   return (
@@ -85,7 +95,8 @@ function ContactMe({ sendMessage, isLoading, isSuccess }) {
 
 const mapStateToProps = (state) => ({
   isLoading: state.contactReducer.loading,
-  isSuccess: state.contactReducer.success
+  isSuccess: state.contactReducer.success,
+  isError: state.contactReducer.error
 })
 
 export default connect(mapStateToProps, { sendMessage })(ContactMe)

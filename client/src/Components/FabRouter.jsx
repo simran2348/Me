@@ -68,7 +68,16 @@ function FabRouter({ isDark, toggleTheme }) {
         ))}
       </div>
       <div className={visible && 'backdrop'} onClick={handleSwipe} />
-      <div className='fabRouterMobile' onClick={handleSwipe}></div>
+      <div
+        id='hanburgerIcon'
+        className={`fabRouterMobile ${visible && 'open'}`}
+        onClick={handleSwipe}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <Hammer onSwipe={handleSwipe} direction='DIRECTION_LEFT'>
         <div className='swiperArea' />
       </Hammer>
@@ -89,7 +98,7 @@ function FabRouter({ isDark, toggleTheme }) {
         </div>
         <div className='swiperProfile'>
           <div
-            className='profilePic'
+            className='profilePicMobile'
             style={{ backgroundImage: `url(${ProfileImage})` }}
           ></div>
           <div className='linkItems'>
