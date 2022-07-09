@@ -189,6 +189,38 @@ body {
   animation: pulse 500ms;
 }
 
+.fabRouterMobile,
+.backdrop,
+.swiperArea,
+.swiper {
+  display: none;
+}
+
+.themeController {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.themeIcon {
+  position: absolute;
+  transform: translate(0px, 0px);
+}
+
+.appear {
+  animation: dawn 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.dissappear {
+  animation: dusk 0.5s ease-in-out;
+  opacity: 0;
+}
+
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -200,11 +232,26 @@ body {
   }
 }
 
-.fabRouterMobile,
-.backdrop,
-.swiperArea,
-.swiper {
-  display: none;
+@keyframes dawn {
+  from {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes dusk {
+  from {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-40px, 0px);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -273,7 +320,7 @@ body {
     box-shadow: inset 3px 0 0 0 var(--theme);
   }
 
-  .themeController {
+  .themeControllerMobile {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -400,26 +447,26 @@ body {
     width: 0%;
     left: 50%;
   }
-}
 
-@keyframes dawn {
-  from {
-    transform: translate(120px, 100px);
-    opacity: 0;
+  @keyframes dawn {
+    from {
+      transform: translate(120px, 100px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
   }
-  to {
-    transform: translate(0px, 0px);
-    opacity: 1;
-  }
-}
 
-@keyframes dusk {
-  from {
-    transform: translate(0px, 0px);
-    opacity: 1;
-  }
-  to {
-    transform: translate(-120px, 100px);
-    opacity: 0;
+  @keyframes dusk {
+    from {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    to {
+      transform: translate(-120px, 100px);
+      opacity: 0;
+    }
   }
 }

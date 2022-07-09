@@ -66,6 +66,20 @@ function FabRouter({ isDark, toggleTheme }) {
             {item.icon}
           </Link>
         ))}
+        <div className='themeController'>
+          <img
+            src={MoonImage}
+            alt='moon'
+            className={`themeIcon ${isDark ? 'appear' : 'dissappear'}`}
+            onClick={toggleTheme}
+          />
+          <img
+            src={SunImage}
+            alt='sun'
+            className={`themeIcon ${!isDark ? 'appear' : 'dissappear'}`}
+            onClick={toggleTheme}
+          />
+        </div>
       </div>
       <div className={visible && 'backdrop'} onClick={handleSwipe} />
       <div
@@ -82,7 +96,7 @@ function FabRouter({ isDark, toggleTheme }) {
         <div className='swiperArea' />
       </Hammer>
       <div className={`swiper ${visible && 'swiperVisible'}`}>
-        <div className='themeController'>
+        <div className='themeControllerMobile'>
           <img
             src={MoonImage}
             alt='moon'
