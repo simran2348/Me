@@ -87,7 +87,11 @@ function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
           placeholder='Type your message here...'
           textarea
         />
-        <RippleButton isLoading={isLoading} label='send message' />
+        <RippleButton
+          disabled={isLoading}
+          label='send message'
+          align={'justifyStart'}
+        />
       </form>
     </div>
   )

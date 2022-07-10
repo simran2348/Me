@@ -14,6 +14,11 @@ body {
 .container {
   margin: 0 70px;
   color: var(--textColor);
+  padding: 0 15px;
+}
+
+.displayNone {
+  display: none;
 }
 
 .appToastContainer {
@@ -143,8 +148,19 @@ body {
 
 .submitButtonContainer {
   display: flex;
-  justify-content: flex-start;
   margin: 2rem 0;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyCenter {
+  justify-content: center;
 }
 
 .button {
@@ -221,6 +237,32 @@ body {
   opacity: 0;
 }
 
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.notFoundImage {
+  object-fit: cover;
+  height: auto;
+  width: 400px;
+}
+
+.notFoundText {
+  color: var(--textColor);
+  font-size: 1.7rem;
+  margin-top: 25px;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -251,6 +293,16 @@ body {
   to {
     transform: translate(-40px, 0px);
     opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .notFoundImage {
+    width: 90%;
+  }
+
+  .notFoundContainer {
+    margin: 0;
   }
 }
 

@@ -11,6 +11,8 @@ function FabRouter({ isDark, toggleTheme }) {
   const location = useLocation()
   const { pathname } = location
   const [visible, setVisible] = useState(false)
+  const isValidPage =
+    pathname === '/' || pathname === '/contact-me' || pathname === '/about'
 
   const pageLinks = [
     {
@@ -56,10 +58,11 @@ function FabRouter({ isDark, toggleTheme }) {
   }
 
   return (
-    <>
+    <div className={isValidPage ? '' : 'displayNone'}>
       <div className='fabRouter'>
-        {pageLinks.map((item) => (
+        {pageLinks.map((item, index) => (
           <Link
+            key={index}
             to={item.path}
             className={`fabIconContainer ${item.selected && 'fabSelected'}`}
           >
@@ -81,7 +84,10 @@ function FabRouter({ isDark, toggleTheme }) {
           />
         </div>
       </div>
-      <div className={visible && 'backdrop'} onClick={handleSwipe} />
+      <div
+        className={visible ? 'backdrop' : 'displaynone'}
+        onClick={handleSwipe}
+      />
       <div
         id='hanburgerIcon'
         className={`fabRouterMobile ${visible && 'open'}`}
@@ -116,8 +122,9 @@ function FabRouter({ isDark, toggleTheme }) {
             style={{ backgroundImage: `url(${ProfileImage})` }}
           ></div>
           <div className='linkItems'>
-            {pageLinks.map((item) => (
+            {pageLinks.map((item, index) => (
               <Link
+                key={index}
                 to={item.path}
                 className={`menuLink ${item.selected && 'menuLinkSelected'}`}
                 onClick={handleSwipe}
@@ -128,7 +135,7 @@ function FabRouter({ isDark, toggleTheme }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

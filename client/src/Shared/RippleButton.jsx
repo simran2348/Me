@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function RippleButton({ isLoading, label }) {
+function RippleButton({ disabled, label, align, path }) {
+  const navigate = useNavigate()
   function mousePositionToCustomProp(event, element) {
     let posX = event.offsetX
     let posY = event.offsetY
@@ -27,13 +29,20 @@ function RippleButton({ isLoading, label }) {
     }
   })
 
+  const handleClick = () => {
+    if (path) {
+      navigate(path)
+    }
+  }
+
   return (
-    <div className='submitButtonContainer'>
+    <div className={`submitButtonContainer ${align}`}>
       <button
         className='button buttonTheme ripple-button'
         type='submit'
-        disabled={isLoading}
+        disabled={disabled}
         id='ripple-button'
+        onClick={() => handleClick()}
       >
         {label}
       </button>
