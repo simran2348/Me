@@ -15,6 +15,16 @@ body {
   margin: 0 70px;
   color: var(--textColor);
   padding: 0 15px;
+  height: 100%;
+}
+
+.coverPageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coverContentContainer{
+  display: flex;
 }
 
 .displayNone {
@@ -46,6 +56,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 99;
+  min-width: 74px;
 }
 
 .fabIconContainer {
@@ -263,6 +275,91 @@ body {
   padding: 0 15px;
 }
 
+.coverPage {
+  background-color: var(--coverPageBackground);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+.coverPageLiftoff{
+  animation: liftoff 1.5s cubic-bezier(.32,.13,.84,.6);
+}
+
+.liftoffButton {
+  background: var(--theme);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgb(218, 87, 36, 1);
+  height: 3rem;
+  width: 3rem;
+  transform: scale(1);
+  animation: pulse-black 1.5s infinite;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.firstContainer{
+  min-width: 360px;
+}
+
+.secondContainer{
+  width: 100%;
+  text-align: center;
+}
+
+.firstText{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.secondText{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--theme);
+}
+
+.coverImage{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 400px;
+}
+
+.liftoffContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(218, 87, 36, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(218, 87, 36, 0);
+  }
+  
+  100% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(218, 87, 36, 0);
+  }
+}
+
+@keyframes liftoff {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -337,7 +434,7 @@ body {
     top: 0;
     left: 0;
     backdrop-filter: brightness(0.5) blur(3px);
-    z-index: 1;
+    z-index: 99;
   }
 
   .swiper {
@@ -348,7 +445,7 @@ body {
     right: -250px;
     transition: 0.2s linear;
     background-color: var(--swiperBackground);
-    z-index: 9;
+    z-index: 99;
     display: flex;
     flex-direction: column;
   }
@@ -498,6 +595,10 @@ body {
     top: 18px;
     width: 0%;
     left: 50%;
+  }
+
+  .coverContentContainer{
+    display: none;
   }
 
   @keyframes dawn {

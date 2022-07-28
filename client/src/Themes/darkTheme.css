@@ -13,4 +13,6 @@
   --profilePicShadow: 0px 0px 0px 0px var(--theme);
   --appToastBackground: rgb(54, 54, 54);
   --appToastTextColor: #ffffff;
+  --coverPageBackground: #140d0d;
 }
+
