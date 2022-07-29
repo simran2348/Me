@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ProfileImage } from "../Assets";
+import { bio, greeting, launchButtonText, name } from "../constants";
+import Typewriter from "../Shared/Typewriter";
 
 function CoverPage({ handleMenu }) {
   const [liftoff, setLiftoff] = useState(false);
@@ -12,10 +14,10 @@ function CoverPage({ handleMenu }) {
       if (element) {
         element.classList.add("displayNone");
       }
-    }, 1500);
+    }, 1000);
     setTimeout(() => {
       handleMenu();
-    }, 1200);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -29,22 +31,27 @@ function CoverPage({ handleMenu }) {
         reloadLiftoff && "displayNone"
       }`}
     >
-      <div className="container coverPageContainer">
+      <div className="coverPageContainer">
         <div className="coverContentContainer">
           <div className="firstContainer">
-            <div className="firstText">Hello, I am</div>
-            <div className="secondText">Simranjit Singh</div>
+            <div>
+              <div className="firstText">{greeting}</div>
+              <Typewriter label={name} class="secondText" />
+              <div className="bioText">{bio}</div>
+            </div>
             <div className="liftoffContainer">
               <button
                 className="liftoffButton"
                 onClick={() => handleLiftoff()}
               />
+              <div className="launchButtonText">{launchButtonText}</div>
             </div>
           </div>
           <div className="secondContainer">
             <img className="coverImage" src={ProfileImage} alt="profile" />
           </div>
         </div>
+        <div className="coverPageContainerMobile">hello</div>
       </div>
     </div>
   );

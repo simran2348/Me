@@ -70,20 +70,20 @@ function FabRouter({ isDark, toggleTheme, menu }) {
               {item.icon}
             </Link>
           ))}
-        <div className="themeController">
-          <img
-            src={MoonImage}
-            alt="moon"
-            className={`themeIcon ${isDark ? "appear" : "dissappear"}`}
-            onClick={toggleTheme}
-          />
-          <img
-            src={SunImage}
-            alt="sun"
-            className={`themeIcon ${!isDark ? "appear" : "dissappear"}`}
-            onClick={toggleTheme}
-          />
-        </div>
+      </div>
+      <div className="themeController">
+        <img
+          src={MoonImage}
+          alt="moon"
+          className={`themeIcon ${isDark ? "appear" : "dissappear"}`}
+          onClick={toggleTheme}
+        />
+        <img
+          src={SunImage}
+          alt="sun"
+          className={`themeIcon ${!isDark ? "appear" : "dissappear"}`}
+          onClick={toggleTheme}
+        />
       </div>
       <div
         className={visible ? "backdrop" : "displaynone"}

@@ -22,9 +22,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 1270px;
+  margin: auto;
+  padding: 0 50px;
+  height: 100%;
+  color: var(--textColor);
 }
 .coverContentContainer{
   display: flex;
+  min-height: 450px;
 }
 
 .displayNone {
@@ -225,13 +231,12 @@ body {
 }
 
 .themeController {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 70px;
+  position: fixed;
+  bottom: 40px;
   right: 0;
   height: 50px;
-  width: 100%;
+  width: 60px;
+  z-index: 999;
 }
 
 .themeIcon {
@@ -285,7 +290,7 @@ body {
   left: 0;
 }
 .coverPageLiftoff{
-  animation: liftoff 1.5s cubic-bezier(.32,.13,.84,.6);
+  animation: liftoff 1s cubic-bezier(.32,.13,.84,.6);
 }
 
 .liftoffButton {
@@ -302,12 +307,16 @@ body {
 }
 
 .firstContainer{
-  min-width: 360px;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .secondContainer{
-  width: 100%;
+  width: 50%;
   text-align: center;
+  padding: 0 50px;
 }
 
 .firstText{
@@ -316,15 +325,17 @@ body {
 }
 
 .secondText{
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
+  margin-top: 5px;
   color: var(--theme);
 }
 
 .coverImage{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 25px 50px 50px 25px;
   max-width: 400px;
 }
 
@@ -332,6 +343,45 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bioText{
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--subtext);
+  margin-top: 10px;
+}
+
+.launchButtonText{
+  font-weight: bold;
+  margin-top: 1rem;
+  color: var(--subtext);
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 1.5px solid var(--theme);
+  white-space: nowrap;
+  max-width: max-content;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.coverPageContainerMobile{
+  display: none;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--theme) }
 }
 
 @keyframes pulse-black {
@@ -388,7 +438,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: translate(-40px, 0px);
+    transform: translate(50px, 0px);
     opacity: 0;
   }
 }
@@ -404,6 +454,10 @@ body {
 }
 
 @media (max-width: 768px) {
+.themeController{
+  display: none;
+}
+
   .container {
     margin: 0;
   }
@@ -597,8 +651,20 @@ body {
     left: 50%;
   }
 
-  .coverContentContainer{
+  .secondContainer{
     display: none;
+  }
+
+  .secondText{
+    font-size: 2rem;
+  }
+
+  .firstText{
+    font-size: 1.5rem;
+  }
+
+  .launchButtonText{
+    text-align: center;
   }
 
   @keyframes dawn {
