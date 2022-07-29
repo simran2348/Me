@@ -7,23 +7,32 @@ import { Provider } from "react-redux";
 import store from "./store";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import CoverPage from "./Components/CoverPage";
 
 function App() {
   const { isDark, toggleTheme } = useContext(ThemeContext);
-  const [menu, setMenu] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  const handleMenu = () => {
-    setMenu(true);
+  const handleVisibility = () => {
+    console.log("asdasd");
+    setVisible(true);
+    localStorage.setItem("website", true);
+
+    setTimeout(() => {
+      const header = document.getElementById("header");
+
+      if (header) {
+        header.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 200);
   };
 
   useEffect(() => {
-    const liftoff = JSON.parse(localStorage.getItem("liftoff"));
+    const website = JSON.parse(localStorage.getItem("website"));
 
-    if (liftoff) {
-      setMenu(true);
+    if (website) {
+      setVisible(true);
     } else {
-      setMenu(false);
+      setVisible(false);
     }
   }, []);
 
@@ -31,9 +40,8 @@ function App() {
     <Provider store={store}>
       <div data-theme={isDark && "dark"} className="app themeBackground">
         <Router>
-          <CoverPage handleMenu={handleMenu} />
-          <FabRouter menu={menu} isDark={isDark} toggleTheme={toggleTheme} />
-          <AppRoutes />
+          <FabRouter show={visible} isDark={isDark} toggleTheme={toggleTheme} />
+          <AppRoutes visible={visible} handleVisibility={handleVisibility} />
         </Router>
         <ToastContainer
           position="top-left"

@@ -6,8 +6,9 @@ import { useLocation } from "react-router-dom";
 import Hammer from "react-hammerjs";
 import { useState } from "react";
 import { MoonImage, SunImage, ProfileImage } from "../Assets/index";
+import { socials } from "../constants";
 
-function FabRouter({ isDark, toggleTheme, menu }) {
+function FabRouter({ isDark, toggleTheme, show }) {
   const location = useLocation();
   const { pathname } = location;
   const [visible, setVisible] = useState(false);
@@ -60,7 +61,7 @@ function FabRouter({ isDark, toggleTheme, menu }) {
   return (
     <div className={isValidPage ? "" : "displayNone"}>
       <div className="fabRouter">
-        {menu &&
+        {show &&
           pageLinks.map((item, index) => (
             <Link
               key={index}
@@ -122,18 +123,39 @@ function FabRouter({ isDark, toggleTheme, menu }) {
             className="profilePicMobile"
             style={{ backgroundImage: `url(${ProfileImage})` }}
           ></div>
-          <div className="linkItems">
-            {menu &&
-              pageLinks.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className={`menuLink ${item.selected && "menuLinkSelected"}`}
-                  onClick={handleSwipe}
-                >
-                  {item.label}
-                </Link>
-              ))}
+          <div className="linksContainerMobile">
+            <div className="linkItems">
+              {show &&
+                pageLinks.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className={`menuLink ${
+                      item.selected && "menuLinkSelected"
+                    }`}
+                    onClick={handleSwipe}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+            </div>
+            <div className="socialLinksMobile">
+              {socials.map((item) => {
+                return (
+                  item.link !== null && (
+                    <a
+                      key={item.id}
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="socialLinkItemMobile"
+                    >
+                      {item.icon}
+                    </a>
+                  )
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

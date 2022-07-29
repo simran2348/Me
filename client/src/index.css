@@ -1,6 +1,15 @@
+:root {
+  --facebook: #4267b2;
+  --github: #6e5494;
+  --linkedin: #0072b1;
+  --twitter: #1da1f2;
+  --medium: #00ab6c;
+  --youtube: #ff0000;
+}
+
 body {
   margin: 0px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .app {
@@ -8,17 +17,19 @@ body {
   width: 100vw;
   display: block;
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container {
-  margin: 0 70px;
+  margin: 0 auto;
   color: var(--textColor);
-  padding: 0 15px;
+  padding: 0 70px;
   height: 100%;
+  max-width: 1100px;
 }
 
-.coverPageContainer{
+.coverPageContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +39,7 @@ body {
   height: 100%;
   color: var(--textColor);
 }
-.coverContentContainer{
+.coverContentContainer {
   display: flex;
   min-height: 450px;
 }
@@ -57,7 +68,7 @@ body {
 .fabRouter {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 15px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -205,7 +216,7 @@ body {
 }
 
 .ripple-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--y);
   left: var(--x);
@@ -282,15 +293,12 @@ body {
 
 .coverPage {
   background-color: var(--coverPageBackground);
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   z-index: 99;
   top: 0;
   left: 0;
-}
-.coverPageLiftoff{
-  animation: liftoff 1s cubic-bezier(.32,.13,.84,.6);
 }
 
 .liftoffButton {
@@ -306,32 +314,32 @@ body {
   cursor: pointer;
 }
 
-.firstContainer{
+.firstContainer {
   min-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.secondContainer{
+.secondContainer {
   width: 50%;
   text-align: center;
   padding: 0 50px;
 }
 
-.firstText{
+.firstText {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.secondText{
+.secondText {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 5px;
   color: var(--theme);
 }
 
-.coverImage{
+.coverImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -339,7 +347,7 @@ body {
   max-width: 400px;
 }
 
-.liftoffContainer{
+.liftoffContainer {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -347,14 +355,14 @@ body {
   align-items: center;
 }
 
-.bioText{
+.bioText {
   font-weight: bold;
   font-size: 1rem;
   color: var(--subtext);
   margin-top: 10px;
 }
 
-.launchButtonText{
+.launchButtonText {
   font-weight: bold;
   margin-top: 1rem;
   color: var(--subtext);
@@ -365,23 +373,73 @@ body {
   border-right: 1.5px solid var(--theme);
   white-space: nowrap;
   max-width: max-content;
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
-.coverPageContainerMobile{
+.coverPageContainerMobile {
   display: none;
 }
 
+.headerContainer {
+  position: relative;
+  margin-top: 100vh;
+  width: 100%;
+}
+
+.titleContainer {
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 3.7rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--theme);
+}
+
+.atTheRate {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--subtext);
+  margin-right: 5px;
+}
+
+.scrollToContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMeContainer {
+}
+
+.sharedTitle {
+}
+
+.aboutMeTitle {
+}
+
+aboutMeDescription {
+}
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--theme) }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--theme);
+  }
 }
 
 @keyframes pulse-black {
@@ -389,24 +447,15 @@ body {
     transform: scale(0.8);
     box-shadow: 0 0 0 0 rgba(218, 87, 36, 0.7);
   }
-  
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 20px rgba(218, 87, 36, 0);
   }
-  
+
   100% {
     transform: scale(0.8);
     box-shadow: 0 0 0 0 rgba(218, 87, 36, 0);
-  }
-}
-
-@keyframes liftoff {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -100vh;
   }
 }
 
@@ -454,12 +503,33 @@ body {
 }
 
 @media (max-width: 768px) {
-.themeController{
-  display: none;
-}
+  .titleContainer {
+    text-align: left;
+  }
+
+  .atTheRate {
+    font-size: 1.5rem;
+  }
+
+  .headerTitle {
+    font-size: 2rem;
+  }
+
+  .headerContainer {
+    position: fixed;
+    top: 100vh;
+    width: 100%;
+    left: 0;
+    padding: 10px;
+  }
+
+  .themeController {
+    display: none;
+  }
 
   .container {
     margin: 0;
+    padding: 0 20px;
   }
 
   .fabRouter {
@@ -488,7 +558,7 @@ body {
     top: 0;
     left: 0;
     backdrop-filter: brightness(0.5) blur(3px);
-    z-index: 99;
+    z-index: 999;
   }
 
   .swiper {
@@ -499,7 +569,7 @@ body {
     right: -250px;
     transition: 0.2s linear;
     background-color: var(--swiperBackground);
-    z-index: 99;
+    z-index: 999;
     display: flex;
     flex-direction: column;
   }
@@ -569,14 +639,24 @@ body {
   }
 
   .linkItems {
+  }
+
+  .socialLinksMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 3rem;
+  }
+
+  .socialLinkItemMobile {
+    margin-bottom: 5px;
   }
 
   .fabRouterMobile {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 9999;
   }
 
   #hanburgerIcon {
@@ -651,20 +731,36 @@ body {
     left: 50%;
   }
 
-  .secondContainer{
+  .secondContainer {
     display: none;
   }
 
-  .secondText{
+  .secondText {
     font-size: 2rem;
   }
 
-  .firstText{
+  .firstText {
     font-size: 1.5rem;
   }
 
-  .launchButtonText{
+  .launchButtonText {
     text-align: center;
+  }
+
+  .linksContainerMobile {
+    overflow-y: scroll;
+    margin: 3rem 0 0;
+    max-height: calc(100vh - 375px);
+    overflow-x: hidden;
+  }
+
+  .linksContainerMobile::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .linksContainerMobile::-webkit-scrollbar-thumb {
+    background-color: var(--theme);
+    border-radius: 50px;
   }
 
   @keyframes dawn {
