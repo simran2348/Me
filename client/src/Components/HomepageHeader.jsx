@@ -10,10 +10,12 @@ function HomepageHeader() {
     }
   };
   return (
-    <div className="headerContainer" id="header">
-      <div className="titleContainer">
-        <span className="atTheRate">@</span>
-        <span className="headerTitle">{name}</span>
+    <>
+      <div className="headerContainer" id="header">
+        <div className="titleContainer">
+          <span className="atTheRate">@</span>
+          <span className="headerTitle">{name}</span>
+        </div>
       </div>
       <div className="scrollToContainer">
         {segments.map((segment) => (
@@ -25,7 +27,7 @@ function HomepageHeader() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

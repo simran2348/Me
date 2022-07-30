@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
   color: var(--textColor);
   padding: 0 70px;
-  height: 100%;
+  min-height: 100%;
   max-width: 1100px;
 }
 
@@ -41,7 +41,8 @@ body {
 }
 .coverContentContainer {
   display: flex;
-  min-height: 450px;
+  max-height: 450px;
+  height: 100%;
 }
 
 .displayNone {
@@ -384,6 +385,7 @@ body {
   position: relative;
   margin-top: 100vh;
   width: 100%;
+  padding-top: 1.5rem;
 }
 
 .titleContainer {
@@ -391,7 +393,7 @@ body {
 }
 
 .headerTitle {
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-decoration: underline;
   color: var(--theme);
@@ -409,18 +411,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5rem;
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+}
+
+.scrollSegment {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--subtext);
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .aboutMeContainer {
 }
 
 .sharedTitle {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--subtext);
+  width: max-content;
 }
 
 .aboutMeTitle {
+  border-left: 5px solid var(--subtext);
+  line-height: 50px;
+  padding-left: 1rem;
 }
 
-aboutMeDescription {
+.aboutMeDescription {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 @keyframes typing {
@@ -503,6 +528,14 @@ aboutMeDescription {
 }
 
 @media (max-width: 768px) {
+  .sharedTitle {
+    font-size: 2rem;
+  }
+
+  .aboutMeTitle {
+    line-height: 35px;
+  }
+
   .titleContainer {
     text-align: left;
   }
@@ -516,11 +549,11 @@ aboutMeDescription {
   }
 
   .headerContainer {
-    position: fixed;
-    top: 100vh;
-    width: 100%;
-    left: 0;
     padding: 10px;
+  }
+
+  .scrollToContainer {
+    display: none;
   }
 
   .themeController {

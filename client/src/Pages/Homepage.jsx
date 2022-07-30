@@ -9,7 +9,7 @@ function Homepage({ handleVisibility, visible }) {
       {visible && (
         <>
           <HomepageHeader />
-          {/* <AboutMe /> */}
+          <AboutMe />
         </>
       )}
     </div>

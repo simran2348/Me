@@ -64,10 +64,17 @@ export const socials = [
   },
 ];
 export const aboutMeTitle = "About Me";
-export const aboutMeDescription = "";
+export const aboutMeDescription =
+  "Hi my name is Simranjit Singh. I was Born and brought up in New Delhi";
 export const segments = [
   {
     id: "aboutMe",
     label: "About Me",
+    selected: false,
+  },
+  {
+    id: "education",
+    label: "Education",
+    selected: false,
   },
 ];
