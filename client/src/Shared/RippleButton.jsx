@@ -1,53 +1,53 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect } from "react";
 
-function RippleButton({ disabled, label, align, path }) {
-  const navigate = useNavigate()
+function RippleButton({
+  disabled,
+  label,
+  align,
+  buttonClass,
+  type,
+  handleClick,
+  id,
+}) {
   function mousePositionToCustomProp(event, element) {
-    let posX = event.offsetX
-    let posY = event.offsetY
+    let posX = event.offsetX;
+    let posY = event.offsetY;
 
-    element.style.setProperty('--x', posX + 'px')
-    element.style.setProperty('--y', posY + 'px')
+    element.style.setProperty("--x", posX + "px");
+    element.style.setProperty("--y", posY + "px");
   }
 
   useEffect(() => {
-    const rippleButton = document.querySelector('.ripple-button')
+    const rippleButton = document.getElementById(id);
 
     if (rippleButton) {
-      rippleButton.addEventListener('click', (e) => {
-        mousePositionToCustomProp(e, rippleButton)
-        rippleButton.classList.add('pulse')
+      rippleButton.addEventListener("click", (e) => {
+        mousePositionToCustomProp(e, rippleButton);
+        rippleButton.classList.add("pulse");
         rippleButton.addEventListener(
-          'animationend',
+          "animationend",
           () => {
-            rippleButton.classList.remove('pulse')
+            rippleButton.classList.remove("pulse");
           },
           { once: true }
-        )
-      })
+        );
+      });
     }
-  })
-
-  const handleClick = () => {
-    if (path) {
-      navigate(path)
-    }
-  }
+  });
 
   return (
     <div className={`submitButtonContainer ${align}`}>
       <button
-        className='button buttonTheme ripple-button'
-        type='submit'
+        className={`button buttonTheme ripple-button ${buttonClass}`}
+        type={type}
         disabled={disabled}
-        id='ripple-button'
-        onClick={() => handleClick()}
+        id={id}
+        onClick={handleClick}
       >
         {label}
       </button>
     </div>
-  )
+  );
 }
 
-export default RippleButton
+export default RippleButton;

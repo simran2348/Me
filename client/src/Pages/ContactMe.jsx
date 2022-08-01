@@ -1,106 +1,108 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from 'react'
-import TextInput from '../Shared/TextInput'
-import { sendMessage } from '../Middleware/Actions'
-import { connect } from 'react-redux'
-import RippleButton from '../Shared/RippleButton'
-import { contactSubtext } from '../constants'
-import { useDispatch } from 'react-redux'
-import { RESET_CONTACT_STATE } from '../Middleware/ActionTypes'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import { useState, useEffect } from "react";
+import TextInput from "../Shared/TextInput";
+import { sendMessage } from "../Middleware/Actions";
+import { connect } from "react-redux";
+import RippleButton from "../Shared/RippleButton";
+import { contactSubtext } from "../constants";
+import { useDispatch } from "react-redux";
+import { RESET_CONTACT_STATE } from "../Middleware/ActionTypes";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const onChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
-    sendMessage(formData)
-  }
+    e.preventDefault();
+    sendMessage(formData);
+  };
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success('Message Sent !!!')
+      toast.success("Message Sent !!!");
       dispatch({
-        type: RESET_CONTACT_STATE
-      })
-      navigate('/')
+        type: RESET_CONTACT_STATE,
+      });
+      navigate("/");
     }
-  }, [isSuccess])
+  }, [isSuccess]);
 
   useEffect(() => {
     if (isError) {
-      toast.error('Oops! Please try after sometime')
+      toast.error("Oops! Please try after sometime");
       dispatch({
-        type: RESET_CONTACT_STATE
-      })
-      navigate('/')
+        type: RESET_CONTACT_STATE,
+      });
+      navigate("/");
     }
-  }, [isError])
+  }, [isError]);
 
-  const { name, email, message } = formData
+  const { name, email, message } = formData;
   return (
-    <div className='contactContainer'>
-      <div className='title'>
-        Let's <span className='themeText'>Talk</span>
+    <div className="contactContainer">
+      <div className="title">
+        Let's <span className="themeText">Talk</span>
       </div>
-      <div className='subText'>{contactSubtext}</div>
-      <form onSubmit={onSubmit} className='contactForm'>
+      <div className="subText">{contactSubtext}</div>
+      <form onSubmit={onSubmit} className="contactForm">
         <TextInput
-          type='text'
+          type="text"
           value={name}
-          name='name'
+          name="name"
           onChange={(e) => onChange(e)}
-          className=''
-          label='Your Name'
-          labelClass=''
+          className=""
+          label="Your Name"
+          labelClass=""
         />
         <TextInput
-          type='email'
+          type="email"
           value={email}
-          name='email'
+          name="email"
           onChange={(e) => onChange(e)}
-          className=''
-          label='Your Email'
-          labelClass=''
+          className=""
+          label="Your Email"
+          labelClass=""
         />
         <TextInput
           value={message}
-          name='message'
+          name="message"
           onChange={(e) => onChange(e)}
-          className=''
-          label='Your Message'
-          labelClass=''
-          placeholder='Type your message here...'
+          className=""
+          label="Your Message"
+          labelClass=""
+          placeholder="Type your message here..."
           textarea
         />
         <RippleButton
           disabled={isLoading}
-          label='send message'
-          align={'justifyStart'}
+          type="submit"
+          label="send message"
+          align={"justifyStart"}
+          id={"contactMe"}
         />
       </form>
     </div>
-  )
+  );
 }
 
 const mapStateToProps = (state) => ({
   isLoading: state.contactReducer.loading,
   isSuccess: state.contactReducer.success,
-  isError: state.contactReducer.error
-})
+  isError: state.contactReducer.error,
+});
 
-export default connect(mapStateToProps, { sendMessage })(ContactMe)
+export default connect(mapStateToProps, { sendMessage })(ContactMe);

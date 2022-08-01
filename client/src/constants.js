@@ -96,7 +96,9 @@ export const aboutMeDescription =
 export const academicsTitle = "My Academics Journey";
 export const certificationTitle = "Certificates I Accomplished";
 export const projectTitle = "My Projects";
-export const careerTitle = "Here comes my Experiance";
+export const careerTitle = "Here comes my Experience";
 export const WrapUpTitle = "Let's Wrap Up";
 export const WrapUpDescription =
-  "Hi Stranger, Thank you for spending time on my website";
+  "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume";
+export const WrapUpContactMessage =
+  "Have something in mind, want to ask something...";

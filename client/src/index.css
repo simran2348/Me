@@ -7,6 +7,11 @@
   --youtube: #ff0000;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0px;
   font-family: "Nunito", sans-serif;
@@ -178,7 +183,6 @@ body {
 
 .submitButtonContainer {
   display: flex;
-  margin: 2rem 0;
 }
 
 .justifyStart {
@@ -198,6 +202,7 @@ body {
   border: none;
   border-radius: 1rem;
   padding: 10px 20px;
+  margin: 2rem 0;
   cursor: pointer;
 }
 
@@ -464,6 +469,14 @@ body {
   font-weight: bold;
 }
 
+.wrapUpContactContainer {
+  display: flex;
+}
+
+.wrapUpContactButton {
+  margin: 0 0 0 20px !important;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -544,6 +557,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .wrapUpContactContainer {
+    display: block;
+  }
+
+  .wrapUpContactButton {
+    margin: 2rem 0 !important;
+  }
+
   .sharedTitle {
     font-size: 2rem;
   }
