@@ -63,9 +63,6 @@ export const socials = [
     icon: <AiFillYoutube fill="var(--youtube)" size={35} />,
   },
 ];
-export const aboutMeTitle = "About Me";
-export const aboutMeDescription =
-  "Hi my name is Simranjit Singh. I was Born and brought up in New Delhi";
 export const segments = [
   {
     id: "aboutMe",
@@ -73,8 +70,33 @@ export const segments = [
     selected: false,
   },
   {
-    id: "education",
-    label: "Education",
+    id: "academics",
+    label: "Academics",
+    selected: false,
+  },
+  {
+    id: "certifications",
+    label: "Certifications",
+    selected: false,
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    selected: false,
+  },
+  {
+    id: "career",
+    label: "Career",
     selected: false,
   },
 ];
+export const aboutMeTitle = "About Me";
+export const aboutMeDescription =
+  "Hello, my name is Simranjit Singh. I was Born and brought up in New Delhi";
+export const academicsTitle = "My Academics Journey";
+export const certificationTitle = "Certificates I Accomplished";
+export const projectTitle = "My Projects";
+export const careerTitle = "Here comes my Experiance";
+export const WrapUpTitle = "Let's Wrap Up";
+export const WrapUpDescription =
+  "Hi Stranger, Thank you for spending time on my website";

@@ -21,7 +21,9 @@ function App() {
       const header = document.getElementById("header");
 
       if (header) {
-        header.scrollIntoView({ behavior: "smooth" });
+        header.scrollIntoView({
+          behavior: "smooth",
+        });
       }
     }, 200);
   };

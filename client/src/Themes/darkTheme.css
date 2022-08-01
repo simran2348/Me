@@ -1,4 +1,4 @@
-[data-theme='dark'] {
+[data-theme="dark"] {
   --theme: #da5724;
   --background: #1c1a1b;
   --fabIconColor: #ffffff;
@@ -14,5 +14,5 @@
   --appToastBackground: rgb(54, 54, 54);
   --appToastTextColor: #ffffff;
   --coverPageBackground: #140d0d;
+  --lightColorShade: #a5a5a540;
 }
-

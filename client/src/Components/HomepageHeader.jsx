@@ -3,10 +3,23 @@ import { name, segments } from "../constants";
 
 function HomepageHeader() {
   const scrollToSegment = (id) => {
-    const segment = document.getElementById(id);
+    const segment =
+      id === "aboutMe"
+        ? document.getElementById("header")
+        : document.getElementById(id);
 
     if (segment) {
-      segment.scrollIntoView({ behavior: "smooth" });
+      if (id === "aboutMe") {
+        segment.scrollIntoView({
+          behavior: "smooth",
+        });
+      } else {
+        segment.scrollIntoView({
+          behavior: "smooth",
+          inline: "nearest",
+          block: "center",
+        });
+      }
     }
   };
   return (

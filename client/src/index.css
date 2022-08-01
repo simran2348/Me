@@ -411,10 +411,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
   position: sticky;
-  top: 20px;
+  top: 0;
   z-index: 1;
+  background: var(--background);
+  height: 50px;
+  padding: 1rem 0;
 }
 
 .scrollSegment {
@@ -425,24 +427,38 @@ body {
   cursor: pointer;
 }
 
-.aboutMeContainer {
+.aboutMeContainer,
+.academicsContainer,
+.certificationsContainer,
+.projectContainer,
+.careerContainer,
+.wrapUpContainer {
+  margin-top: 3rem;
+}
+
+.footerContainer {
+  position: absolute;
+  margin-top: 4rem;
+  width: 100vw;
+  left: 0;
+  height: max-content;
+  text-align: center;
+  color: var(--lightColorShade);
+  padding: 2rem 0;
 }
 
 .sharedTitle {
-  margin-top: 3rem;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: bold;
   color: var(--subtext);
-  width: max-content;
-}
-
-.aboutMeTitle {
+  width: 100%;
   border-left: 5px solid var(--subtext);
   line-height: 50px;
   padding-left: 1rem;
 }
 
-.aboutMeDescription {
+.aboutMeDescription,
+.wrapUpDescription {
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -549,7 +565,10 @@ body {
   }
 
   .headerContainer {
-    padding: 10px;
+    padding: 11px 0;
+    position: sticky;
+    top: 0;
+    background: var(--background);
   }
 
   .scrollToContainer {

@@ -4,7 +4,7 @@ import { aboutMeTitle, aboutMeDescription } from "../constants";
 function AboutMe() {
   return (
     <div className="aboutMeContainer" id="aboutMe">
-      <div className="sharedTitle aboutMeTitle">{aboutMeTitle}</div>
+      <div className="sharedTitle">{aboutMeTitle}</div>
       <div className="aboutMeDescription">{aboutMeDescription}</div>
     </div>
   );
