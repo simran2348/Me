@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   WrapUpContactMessage,
   WrapUpDescription,
@@ -7,6 +8,11 @@ import {
 import RippleButton from "../Shared/RippleButton";
 
 function WrapUp() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/contact-me");
+  };
   return (
     <div className="wrapUpContainer" id="aboutMe">
       <div className="sharedTitle">{WrapUpTitle}</div>
@@ -25,8 +31,9 @@ function WrapUp() {
           align={"justifyStart"}
           type="button"
           id={"wrapUpContact"}
+          handleClick={handleNavigate}
         />
-      </div>{" "}
+      </div>
     </div>
   );
 }

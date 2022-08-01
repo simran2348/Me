@@ -102,3 +102,95 @@ export const WrapUpDescription =
   "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume";
 export const WrapUpContactMessage =
   "Have something in mind, want to ask something...";
+export const skills = {
+  frontEnd: [
+    {
+      id: "HTML5",
+      label: "HTML5",
+    },
+    {
+      id: "CSS3",
+      label: "CSS3",
+    },
+    {
+      id: "Javascript",
+      label: "Javascript",
+    },
+    {
+      id: "ReactJs",
+      label: "ReactJs",
+    },
+    {
+      id: "React Native",
+      label: "React Native",
+    },
+  ],
+  frameWorks: [
+    {
+      id: "BootStrap",
+      label: "BootStrap",
+    },
+    {
+      id: "Material UI",
+      label: "Material UI",
+    },
+    {
+      id: "Tailwind CSS",
+      label: "Tailwind CSS",
+    },
+  ],
+  stateManagement: [
+    {
+      id: "React Redux",
+      label: "React Redux",
+    },
+    {
+      id: "Redux Toolkit",
+      label: "Redux Toolkit",
+    },
+  ],
+  backEnd: [
+    {
+      id: "Express Js",
+      label: "Express Js",
+    },
+    {
+      id: "Node Js",
+      label: "Node Js",
+    },
+    {
+      id: "Mongoose",
+      label: "Mongoose",
+    },
+  ],
+  database: [
+    {
+      id: "MongoDb",
+      label: "MongoDb",
+    },
+  ],
+  softwares: [
+    {
+      id: "VS code",
+      label: "VS code",
+    },
+    {
+      id: "Postman",
+      label: "Postman",
+    },
+    {
+      id: "Github destkop",
+      label: "Github destkop",
+    },
+    {
+      id: "MongoDb Compass",
+      label: "MongoDb Compass",
+    },
+  ],
+  versionControl: [
+    {
+      id: "GIT",
+      label: "GIT",
+    },
+  ],
+};
