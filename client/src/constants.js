@@ -15,8 +15,8 @@ import {
   SiMongodb,
   SiVisualstudiocode,
   SiPostman,
-  SiJavascript,
 } from "react-icons/si";
+import { TbBrandJavascript } from "react-icons/tb";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { Instagram, Mongoose } from "./Assets";
 import resume from "./Assets/SimranjitSingh_Resume.pdf";
@@ -121,31 +121,31 @@ export const skills = {
     {
       id: "HTML5",
       label: "HTML5",
-      icon: <AiFillHtml5 />,
+      icon: <AiFillHtml5 color="var(--html)" size={25} />,
       width: 80,
     },
     {
       id: "CSS3",
       label: "CSS3",
-      icon: <DiCss3 />,
+      icon: <DiCss3 color="var(--css)" size={25} />,
       width: 80,
     },
     {
       id: "Javascript",
       label: "Javascript",
-      icon: <SiJavascript />,
+      icon: <TbBrandJavascript color="var(--javascript)" size={25} />,
       width: 80,
     },
     {
       id: "ReactJs",
       label: "ReactJs",
-      icon: <FaReact />,
+      icon: <FaReact color="var(--react)" size={25} />,
       width: 90,
     },
     {
       id: "React Native",
       label: "React Native",
-      icon: <FaReact />,
+      icon: <FaReact color="var(--react)" size={25} />,
       width: 60,
     },
   ],
@@ -153,39 +153,39 @@ export const skills = {
     {
       id: "Express Js",
       label: "Express Js",
-      icon: <SiJavascript />,
+      icon: <TbBrandJavascript color="var(--javascript)" size={25} />,
       width: 70,
     },
     {
       id: "Node Js",
       label: "Node Js",
-      icon: <FaNodeJs />,
+      icon: <FaNodeJs color="var(--node)" size={25} />,
       width: 70,
     },
     {
       id: "Mongoose",
       label: "Mongoose",
-      icon: <Mongoose size={45} />,
+      icon: <Mongoose color="var(--mongoose)" size={45} />,
       width: 70,
     },
   ],
   frameworks: [
     {
-      id: "BootStrap",
-      label: "BootStrap",
-      icon: <BsBootstrapFill />,
+      id: "Bootstrap",
+      label: "Bootstrap",
+      icon: <BsBootstrapFill color="var(--bootstrap)" size={24} />,
       width: 80,
     },
     {
       id: "Material UI",
       label: "Material UI",
-      icon: <SiMaterialui />,
+      icon: <SiMaterialui color="var(--material)" size={24} />,
       width: 80,
     },
     {
       id: "Tailwind CSS",
       label: "Tailwind CSS",
-      icon: <SiTailwindcss />,
+      icon: <SiTailwindcss color="var(--tailwind)" size={25} />,
       width: 60,
     },
   ],
@@ -193,13 +193,13 @@ export const skills = {
     {
       id: "React Redux",
       label: "React Redux",
-      icon: <SiRedux />,
+      icon: <SiRedux color="var(--redux)" size={25} />,
       width: 75,
     },
     {
       id: "Redux Toolkit",
       label: "Redux Toolkit",
-      icon: <SiRedux />,
+      icon: <SiRedux color="var(--redux)" size={25} />,
       width: 60,
     },
   ],
@@ -207,33 +207,33 @@ export const skills = {
 export const database = {
   id: "MongoDb",
   label: "MongoDb",
-  icon: <SiMongodb />,
+  icon: <SiMongodb color="var(--mongo)" size={25} />,
 };
 export const softwares = [
   {
     id: "VS code",
     label: "VS code",
-    icon: <SiVisualstudiocode />,
+    icon: <SiVisualstudiocode color="var(--code)" size={25} />,
   },
   {
     id: "Postman",
     label: "Postman",
-    icon: <SiPostman />,
+    icon: <SiPostman size={25} color="var(--postman)" />,
   },
   {
     id: "Github destkop",
     label: "Github destkop",
-    icon: <AiOutlineGithub />,
+    icon: <AiOutlineGithub color="var(--github)" size={25} />,
   },
   {
     id: "MongoDb Compass",
     label: "MongoDb Compass",
-    icon: <SiMongodb />,
+    icon: <SiMongodb color="var(--mongo)" size={25} />,
   },
 ];
 export const versionControl = {
   id: "GIT",
   label: "GIT",
-  icon: <AiOutlineGithub />,
+  icon: <AiOutlineGithub color="var(--github)" size={25} />,
 };
 export const Resume = resume;

@@ -24,6 +24,7 @@ function Skills() {
                       className="statbar"
                       style={{ width: `${stat.width}%` }}
                     />
+                    <span className="statPercentage">{stat.width}%</span>
                   </div>
                 </React.Fragment>
               ))}

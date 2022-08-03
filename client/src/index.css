@@ -5,6 +5,19 @@
   --twitter: #1da1f2;
   --medium: #00ab6c;
   --youtube: #ff0000;
+  --html: #e34c26;
+  --css: #264de4;
+  --javascript: #f0db4f;
+  --react: #61dbfb;
+  --bootstrap: #563d7c;
+  --material: #29b6f6;
+  --tailwind: #36b7f0;
+  --redux: #764abc;
+  --mongoose: #840000;
+  --mongo: #4db33d;
+  --node: #66cc33;
+  --code: #0078d7;
+  --postman: #ef5b25 *;
 }
 
 button,
@@ -920,7 +933,7 @@ body {
 
 .skillGridItem {
   width: 100%;
-  height: 440px;
+  height: 500px;
   background-color: var(--lightColorShade);
   text-align: start;
   margin: auto;
@@ -946,7 +959,7 @@ body {
   align-items: center;
   height: 40px;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .gridStatTitle {
@@ -957,11 +970,22 @@ body {
   width: 100%;
   height: 5px;
   background-color: var(--lightColorShade);
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .statbar {
   height: 100%;
   background-color: var(--theme);
+}
+
+.statPercentage {
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--theme);
+  right: 0;
+  bottom: 5px;
 }
 
 @media (max-width: 1000px) {
