@@ -4,9 +4,21 @@ import {
   AiOutlineGithub,
   AiFillLinkedin,
   AiFillYoutube,
+  AiFillHtml5,
 } from "react-icons/ai";
-import { BsMedium } from "react-icons/bs";
-import { Instagram } from "./Assets";
+import { DiCss3 } from "react-icons/di";
+import { BsMedium, BsBootstrapFill } from "react-icons/bs";
+import {
+  SiTailwindcss,
+  SiMaterialui,
+  SiRedux,
+  SiMongodb,
+  SiVisualstudiocode,
+  SiPostman,
+  SiJavascript,
+} from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { Instagram, Mongoose } from "./Assets";
 import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
 export const greeting = "Hello, I am";
@@ -103,96 +115,125 @@ export const WrapUpDescription =
   "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume";
 export const WrapUpContactMessage =
   "Have something in mind, want to ask something...";
+export const skillsTitle = "Check out my skills";
 export const skills = {
-  frontEnd: [
+  frontend: [
     {
       id: "HTML5",
       label: "HTML5",
+      icon: <AiFillHtml5 />,
+      width: 80,
     },
     {
       id: "CSS3",
       label: "CSS3",
+      icon: <DiCss3 />,
+      width: 80,
     },
     {
       id: "Javascript",
       label: "Javascript",
+      icon: <SiJavascript />,
+      width: 80,
     },
     {
       id: "ReactJs",
       label: "ReactJs",
+      icon: <FaReact />,
+      width: 90,
     },
     {
       id: "React Native",
       label: "React Native",
+      icon: <FaReact />,
+      width: 60,
     },
   ],
-  frameWorks: [
-    {
-      id: "BootStrap",
-      label: "BootStrap",
-    },
-    {
-      id: "Material UI",
-      label: "Material UI",
-    },
-    {
-      id: "Tailwind CSS",
-      label: "Tailwind CSS",
-    },
-  ],
-  stateManagement: [
-    {
-      id: "React Redux",
-      label: "React Redux",
-    },
-    {
-      id: "Redux Toolkit",
-      label: "Redux Toolkit",
-    },
-  ],
-  backEnd: [
+  backend: [
     {
       id: "Express Js",
       label: "Express Js",
+      icon: <SiJavascript />,
+      width: 70,
     },
     {
       id: "Node Js",
       label: "Node Js",
+      icon: <FaNodeJs />,
+      width: 70,
     },
     {
       id: "Mongoose",
       label: "Mongoose",
+      icon: <Mongoose size={45} />,
+      width: 70,
     },
   ],
-  database: [
+  frameworks: [
     {
-      id: "MongoDb",
-      label: "MongoDb",
+      id: "BootStrap",
+      label: "BootStrap",
+      icon: <BsBootstrapFill />,
+      width: 80,
+    },
+    {
+      id: "Material UI",
+      label: "Material UI",
+      icon: <SiMaterialui />,
+      width: 80,
+    },
+    {
+      id: "Tailwind CSS",
+      label: "Tailwind CSS",
+      icon: <SiTailwindcss />,
+      width: 60,
     },
   ],
-  softwares: [
+  "state management": [
     {
-      id: "VS code",
-      label: "VS code",
+      id: "React Redux",
+      label: "React Redux",
+      icon: <SiRedux />,
+      width: 75,
     },
     {
-      id: "Postman",
-      label: "Postman",
-    },
-    {
-      id: "Github destkop",
-      label: "Github destkop",
-    },
-    {
-      id: "MongoDb Compass",
-      label: "MongoDb Compass",
+      id: "Redux Toolkit",
+      label: "Redux Toolkit",
+      icon: <SiRedux />,
+      width: 60,
     },
   ],
-  versionControl: [
-    {
-      id: "GIT",
-      label: "GIT",
-    },
-  ],
+};
+export const database = {
+  id: "MongoDb",
+  label: "MongoDb",
+  icon: <SiMongodb />,
+};
+export const softwares = [
+  {
+    id: "VS code",
+    label: "VS code",
+    icon: <SiVisualstudiocode />,
+  },
+  {
+    id: "Postman",
+    label: "Postman",
+    icon: <SiPostman />,
+  },
+  {
+    id: "Github destkop",
+    label: "Github destkop",
+    icon: <AiOutlineGithub />,
+  },
+  {
+    id: "MongoDb Compass",
+    label: "MongoDb Compass",
+    icon: <SiMongodb />,
+  },
+];
+export const versionControl = {
+  id: "GIT",
+  label: "GIT",
+  icon: <AiOutlineGithub />,
 };
 export const Resume = resume;

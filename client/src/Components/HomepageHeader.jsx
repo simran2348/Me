@@ -33,6 +33,7 @@ function HomepageHeader() {
       <div className="scrollToContainer">
         {segments.map((segment) => (
           <div
+            key={segment.id}
             className="scrollSegment"
             onClick={() => scrollToSegment(segment.id)}
           >

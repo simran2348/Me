@@ -394,6 +394,7 @@ body {
   margin-top: 100vh;
   width: 100%;
   padding-top: 1.5rem;
+  z-index: 1;
 }
 
 .titleContainer {
@@ -441,7 +442,12 @@ body {
 .projectContainer,
 .careerContainer,
 .wrapUpContainer {
+  margin-top: 4rem;
+}
+
+.skillsContainer {
   margin-top: 3rem;
+  text-align: center;
 }
 
 .footerContainer {
@@ -463,6 +469,40 @@ body {
   border-left: 5px solid var(--subtext);
   line-height: 50px;
   padding-left: 1rem;
+}
+
+.sharedSubTitle {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--subtext);
+  width: max-content;
+  margin: auto;
+  border-left: 3px solid var(--subtext);
+  border-right: 3px solid var(--subtext);
+  line-height: 50px;
+  padding: 2px 10px 0;
+  z-index: 0;
+}
+
+.sharedSubTitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1px;
+  height: 3px;
+  width: 46px;
+  background-color: var(--subtext);
+}
+
+.sharedSubTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  height: 3px;
+  width: 45px;
+  background-color: var(--subtext);
 }
 
 .aboutMeDescription,
@@ -561,6 +601,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .sharedSubTitle {
+    font-size: 1.7rem;
+    line-height: 45px;
+  }
+
   .wrapUpContactContainer {
     display: block;
   }
@@ -860,5 +905,80 @@ body {
       transform: translate(-120px, 100px);
       opacity: 0;
     }
+  }
+}
+
+/* Skills Grid */
+.skillGridContainer {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: auto auto;
+  margin-top: 3rem;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.skillGridItem {
+  width: 100%;
+  height: 440px;
+  background-color: var(--lightColorShade);
+  text-align: start;
+  margin: auto;
+}
+
+.gridItemTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gridItemStatsContainer {
+  padding: 0 1rem 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--subtext);
+}
+
+.gridStatTitleContainer {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.gridStatTitle {
+  margin-right: 10px;
+}
+
+.statbarContainer {
+  width: 100%;
+  height: 5px;
+  background-color: var(--lightColorShade);
+}
+
+.statbar {
+  height: 100%;
+  background-color: var(--theme);
+}
+
+@media (max-width: 1000px) {
+  .skillGridContainer {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    column-gap: 0;
+    row-gap: 1.5rem;
+  }
+
+  .skillGridItem {
+    max-width: 500px;
+    height: max-content;
+    border-radius: 0.5rem;
+  }
+
+  .gridItemTitle {
+    font-size: 1.4rem;
   }
 }
