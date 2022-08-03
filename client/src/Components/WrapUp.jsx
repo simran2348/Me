@@ -25,6 +25,7 @@ function WrapUp() {
         id={"downloadResume"}
         path={Resume}
         download={true}
+        downloadLabel="Simranjit_Singh"
       />
       <div className="wrapUpContactContainer">
         <div className="wrapUpDescription">{WrapUpContactMessage}</div>

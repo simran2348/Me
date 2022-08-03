@@ -10,6 +10,7 @@ function RippleButton({
   id,
   path,
   download,
+  downloadLabel,
 }) {
   function mousePositionToCustomProp(event, element) {
     let posX = event.offsetX;
@@ -45,7 +46,7 @@ function RippleButton({
           target="_blank"
           rel="noopener noreferrer"
           className={`button buttonTheme ripple-button ${buttonClass}`}
-          download={download}
+          download={download && downloadLabel}
           disabled={disabled}
           id={id}
         >
