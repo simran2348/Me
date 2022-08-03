@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
+  Resume,
   WrapUpContactMessage,
   WrapUpDescription,
   WrapUpTitle,
@@ -22,6 +23,8 @@ function WrapUp() {
         align={"justifyStart"}
         type="button"
         id={"downloadResume"}
+        path={Resume}
+        download={true}
       />
       <div className="wrapUpContactContainer">
         <div className="wrapUpDescription">{WrapUpContactMessage}</div>

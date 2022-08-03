@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { BsMedium } from "react-icons/bs";
 import { Instagram } from "./Assets";
+import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
 export const greeting = "Hello, I am";
 export const name = "Simranjit Singh";
@@ -194,3 +195,4 @@ export const skills = {
     },
   ],
 };
+export const Resume = resume;

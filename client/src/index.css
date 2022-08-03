@@ -10,6 +10,9 @@
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
 }
 
 body {
