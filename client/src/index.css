@@ -17,7 +17,11 @@
   --mongo: #4db33d;
   --node: #66cc33;
   --code: #0078d7;
-  --postman: #ef5b25 *;
+  --postman: #ef5b25;
+  --firebase: #ffa611;
+  --heroku: #6762a6;
+  --vercel: #0070f3;
+  --netlify: #00c7b7;
 }
 
 button,
@@ -456,11 +460,6 @@ body {
 .careerContainer,
 .wrapUpContainer {
   margin-top: 4rem;
-}
-
-.skillsContainer {
-  margin-top: 3rem;
-  text-align: center;
 }
 
 .footerContainer {
@@ -921,6 +920,15 @@ body {
   }
 }
 
+.skillsContainer,
+.databaseContainer,
+.hostingContainer,
+.softwareContainer,
+.versionContainer {
+  margin-top: 4rem;
+  text-align: center;
+}
+
 /* Skills Grid */
 .skillGridContainer {
   display: grid;
@@ -940,7 +948,7 @@ body {
 }
 
 .gridItemTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 1rem;
   text-transform: uppercase;
@@ -1004,5 +1012,41 @@ body {
 
   .gridItemTitle {
     font-size: 1.4rem;
+  }
+}
+
+/* Other Grids */
+.databaseItemContainer,
+.hostingItemContainer,
+.softwareItemContainer,
+.versionItemContainer {
+  margin-top: 3rem;
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 140px);
+}
+
+.databaseIcon,
+.hostingIcon,
+.softwareIcon,
+.versionIcon {
+  margin-bottom: 1rem;
+}
+
+.databaseTitle,
+.hostingTitle,
+.softwareTitle,
+.versionTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .databaseTitle,
+  .hostingTitle,
+  .softwareTitle,
+  .versionTitle {
+    font-size: 1.5rem;
   }
 }

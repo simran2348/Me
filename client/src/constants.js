@@ -15,6 +15,10 @@ import {
   SiMongodb,
   SiVisualstudiocode,
   SiPostman,
+  SiFirebase,
+  SiHeroku,
+  SiVercel,
+  SiNetlify,
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaReact, FaNodeJs } from "react-icons/fa";
@@ -204,36 +208,71 @@ export const skills = {
     },
   ],
 };
-export const database = {
-  id: "MongoDb",
-  label: "MongoDb",
-  icon: <SiMongodb color="var(--mongo)" size={25} />,
-};
+export const databaseTitle = "Database";
+export const database = [
+  {
+    id: "MongoDb",
+    label: "MongoDb",
+    icon: <SiMongodb color="var(--mongo)" size={65} />,
+  },
+  {
+    id: "Firebase",
+    label: "Firebase",
+    icon: <SiFirebase color="var(--firebase)" size={65} />,
+  },
+];
+export const hostingTitle = "Hosting Platform";
+export const hosting = [
+  {
+    id: "Heroku",
+    label: "Heroku",
+    icon: <SiHeroku color="var(--heroku)" size={65} />,
+  },
+  {
+    id: "Vercel",
+    label: "Vercel",
+    icon: <SiVercel size={65} color="var(--vercel)" />,
+  },
+  {
+    id: "Firebase",
+    label: "Firebase",
+    icon: <SiFirebase color="var(--firebase)" size={65} />,
+  },
+  {
+    id: "Netlify",
+    label: "Netlify",
+    icon: <SiNetlify color="var(--netlify)" size={65} />,
+  },
+];
+export const softwareTitle = "Other Softwares";
 export const softwares = [
   {
     id: "VS code",
     label: "VS code",
-    icon: <SiVisualstudiocode color="var(--code)" size={25} />,
+    icon: <SiVisualstudiocode color="var(--code)" size={65} />,
   },
   {
     id: "Postman",
     label: "Postman",
-    icon: <SiPostman size={25} color="var(--postman)" />,
+    icon: <SiPostman size={65} color="var(--postman)" />,
   },
   {
     id: "Github destkop",
     label: "Github destkop",
-    icon: <AiOutlineGithub color="var(--github)" size={25} />,
+    icon: <AiOutlineGithub color="var(--github)" size={65} />,
   },
   {
     id: "MongoDb Compass",
     label: "MongoDb Compass",
-    icon: <SiMongodb color="var(--mongo)" size={25} />,
+    icon: <SiMongodb color="var(--mongo)" size={65} />,
   },
 ];
-export const versionControl = {
-  id: "GIT",
-  label: "GIT",
-  icon: <AiOutlineGithub color="var(--github)" size={25} />,
-};
+export const versionControlTitle = "For Version Control";
+export const versionControl = [
+  {
+    id: "GIT",
+    label: "GIT",
+    icon: <AiOutlineGithub color="var(--github)" size={65} />,
+  },
+];
 export const Resume = resume;
