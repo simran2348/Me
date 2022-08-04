@@ -1,9 +1,13 @@
 import React from "react";
 import { certificates, certificationTitle } from "../constants";
 
-function Certifications() {
+function Certifications({ certificationsRef }) {
   return (
-    <div className="certificationsContainer" id="certifications">
+    <div
+      className="certificationsContainer"
+      id="certifications"
+      ref={certificationsRef}
+    >
       <div className="sharedTitle">{certificationTitle}</div>
       <div className="certificationGridContainer">
         {certificates.map((item) => (

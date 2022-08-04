@@ -6,9 +6,9 @@ import Hosting from "./Hosting";
 import VersionControl from "./VersionControl";
 import Software from "./Software";
 
-function AboutMe() {
+function AboutMe({ aboutMeRef }) {
   return (
-    <div className="aboutMeContainer" id="aboutMe">
+    <div className="aboutMeContainer" id="aboutMe" ref={aboutMeRef}>
       <div className="sharedTitle">{aboutMeTitle}</div>
       <div className="aboutMeDescription">{aboutMeDescription}</div>
       <Skills />

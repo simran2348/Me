@@ -1,9 +1,9 @@
 import React from "react";
 import { careerTitle } from "../constants";
 
-function Career() {
+function Career({ careerRef }) {
   return (
-    <div className="careerContainer" id="career">
+    <div className="careerContainer" id="career" ref={careerRef}>
       <div className="sharedTitle">{careerTitle}</div>
     </div>
   );

@@ -36,6 +36,10 @@
   );
 }
 
+html {
+  overflow-x: hidden;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -50,12 +54,9 @@ body {
 }
 
 .app {
-  height: 100vh;
   width: 100vw;
   display: block;
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .container {
@@ -106,7 +107,7 @@ body {
 .fabRouter {
   position: fixed;
   top: 0;
-  right: 15px;
+  right: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -331,7 +332,7 @@ body {
 
 .coverPage {
   background-color: var(--coverPageBackground);
-  position: absolute;
+  position: relative;
   height: 100vh;
   width: 100vw;
   z-index: 99;
@@ -420,9 +421,8 @@ body {
 
 .headerContainer {
   position: relative;
-  margin-top: 100vh;
-  width: 100%;
   padding-top: 1.5rem;
+  width: 100%;
   z-index: 1;
 }
 
@@ -449,20 +449,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
   top: 0;
   z-index: 1;
   background: var(--background);
   height: 50px;
   padding: 1rem 0;
+  position: sticky;
+  transition: 0.1s linear;
+}
+
+.scrollSegmentFixed {
+  box-shadow: 0px 0px 15px -5px var(--subtext);
+  transition: 0.3s linear;
 }
 
 .scrollSegment {
   font-size: 1rem;
   font-weight: bold;
   color: var(--subtext);
-  margin: 0 10px;
+  margin: 0 1rem;
   cursor: pointer;
+}
+
+.segmentSelected {
+  transform: scale(1.2);
+  border-bottom: 3px solid var(--subtext);
+  transition: 0.1s linear;
 }
 
 .aboutMeContainer,
@@ -475,9 +487,9 @@ body {
 }
 
 .footerContainer {
-  position: absolute;
+  position: relative;
   margin-top: 4rem;
-  width: 100vw;
+  width: 100%;
   left: 0;
   height: max-content;
   text-align: center;
@@ -625,6 +637,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .headerFixed {
+    box-shadow: 0px 0px 15px -5px var(--subtext);
+    transition: 0.3s linear;
+  }
+
   .sharedSubTitle {
     font-size: 1.7rem;
     line-height: 45px;
@@ -652,6 +669,7 @@ body {
 
   .atTheRate {
     font-size: 1.5rem;
+    margin-left: 15px;
   }
 
   .headerTitle {
