@@ -40,6 +40,46 @@ function HomepageHeader({
 
   useEffect(() => {
     const handleScroll = (e) => {
+      if (window.scrollY < window.innerHeight) {
+        const tempSegment = [...navsegment];
+        refs.map((ref) => {
+          if (ref) {
+            if (
+              ref.current.offsetTop - window.scrollY <
+              window.innerHeight / 2
+            ) {
+              tempSegment.map((segment) => {
+                if (ref.current.id === segment.id) {
+                  segment.selected = false;
+                }
+
+                setNavSegment(tempSegment);
+              });
+            }
+          }
+        });
+      } else {
+        const tempSegment = [...navsegment];
+        refs.map((ref) => {
+          if (ref) {
+            if (
+              ref.current.offsetTop - window.scrollY <
+              window.innerHeight / 2
+            ) {
+              tempSegment.map((segment) => {
+                if (ref.current.id === segment.id) {
+                  segment.selected = true;
+                } else {
+                  segment.selected = false;
+                }
+              });
+
+              setNavSegment(tempSegment);
+            }
+          }
+        });
+      }
+
       if (window.scrollY > window.innerHeight + 100.23) {
         const scrollContainer = document.getElementById("scrollContainer");
         const header = document.getElementById("header");
@@ -59,22 +99,6 @@ function HomepageHeader({
           scrollContainer.classList.remove("scrollSegmentFixed");
         }
       }
-
-      // refs.map((ref) => {
-      //   if (ref) {
-      //     if (ref.current.offsetTop - window.scrollY < window.innerHeight / 2) {
-      //       tempSegment.map((segment) => {
-      //         if (ref.current.id === segment.id) {
-      //           segment.selected = true;
-      //         } else {
-      //           segment.selected = false;
-      //         }
-      //       });
-
-      //       setNavSegment(tempSegment);
-      //     }
-      //   }
-      // });
     };
     window.addEventListener("scroll", handleScroll, false);
     return () => {
