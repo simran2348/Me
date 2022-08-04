@@ -19,10 +19,19 @@ import {
   SiHeroku,
   SiVercel,
   SiNetlify,
+  SiUdemy,
+  SiMicrosoft,
 } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { Instagram, Mongoose } from "./Assets";
+import {
+  AZ_900,
+  Instagram,
+  M001,
+  MernStack,
+  Mongoose,
+  ReactFrontToBack,
+} from "./Assets";
 import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
 export const greeting = "Hello, I am";
@@ -276,3 +285,37 @@ export const versionControl = [
   },
 ];
 export const Resume = resume;
+export const certificates = [
+  {
+    id: 1,
+    title: "React Front To Back 2022",
+    issuer: "Udemy",
+    image: ReactFrontToBack,
+    icon: <SiUdemy color="white" size={40} />,
+    background: "var(--udemy)",
+  },
+  {
+    id: 2,
+    title: "MERN Stack Front To Back: Full Stack React, Redux & Node.js",
+    issuer: "Udemy",
+    image: MernStack,
+    icon: <SiUdemy color="white" size={40} />,
+    background: "var(--udemy)",
+  },
+  {
+    id: 3,
+    title: "M001-MongoDB Basics",
+    issuer: "MongoDB",
+    image: M001,
+    icon: <SiMongodb color="white" size={40} />,
+    background: "var(--mongo)",
+  },
+  {
+    id: 4,
+    title: "Azure Fundamentals: AZ-900",
+    issuer: "Microsoft",
+    image: AZ_900,
+    icon: <SiMicrosoft color="white" size={40} />,
+    background: "var(--microsoft)",
+  },
+];
