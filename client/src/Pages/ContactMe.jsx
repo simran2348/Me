@@ -54,10 +54,10 @@ function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
   const { name, email, message } = formData;
   return (
     <div className="contactContainer">
-      <div className="title">
+      <div className="contactTitle">
         Let's <span className="themeText">Talk</span>
       </div>
-      <div className="subText">{contactSubtext}</div>
+      <div className="contactSubText">{contactSubtext}</div>
       <form onSubmit={onSubmit} className="contactForm">
         <TextInput
           type="text"
@@ -90,7 +90,7 @@ function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
         <RippleButton
           disabled={isLoading}
           type="submit"
-          label="send message"
+          label="Send Message"
           align={"justifyStart"}
           id={"contactMe"}
         />

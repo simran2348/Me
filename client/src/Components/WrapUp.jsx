@@ -15,7 +15,7 @@ function WrapUp() {
     navigate("/contact-me");
   };
   return (
-    <div className="wrapUpContainer" id="aboutMe">
+    <div className="wrapUpContainer" id="wrapUp">
       <div className="sharedTitle">{WrapUpTitle}</div>
       <div className="wrapUpDescription">{WrapUpDescription}</div>
       <RippleButton
