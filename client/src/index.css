@@ -5,17 +5,7 @@
   --twitter: #1da1f2;
   --medium: #00ab6c;
   --youtube: #ff0000;
-  --html: #e34c26;
-  --css: #264de4;
-  --javascript: #f0db4f;
-  --react: #61dbfb;
-  --bootstrap: #563d7c;
-  --material: #29b6f6;
-  --tailwind: #36b7f0;
-  --redux: #764abc;
-  --mongoose: #840000;
   --mongo: #4db33d;
-  --node: #66cc33;
   --code: #0078d7;
   --postman: #ef5b25;
   --firebase: #ffa611;
@@ -35,14 +25,14 @@
     #01a6f0 100%
   );
   --titleFontSize: 2.7rem;
-  --subTitleFontsize: 2rem;
-  --descriptionfontSize: 1.2rem;
+  --subTitleFontSize: 2rem;
+  --descriptionFontSize: 1.2rem;
   --cardTitleFontSize: 1.8rem;
-  --cardSubTitleFontsize: 1.4rem;
-  --cardDescriptionfontSize: 1.1rem;
+  --cardSubTitleFontSize: 1.4rem;
+  --carddescriptionFontSize: 1.1rem;
   --blockTitleFontSize: 1.5rem;
   --headerTitleFontSize: 3.5rem;
-  --headerDescriptionfontSize: 1.1rem;
+  --headerdescriptionFontSize: 1.1rem;
   --buttonTitle: 1.1rem;
   --formLabelFontSize: 1rem;
   --atTheRate: 2rem;
@@ -51,14 +41,14 @@
 @media (max-width: 768px) {
   :root {
     --titleFontSize: 2rem;
-    --subTitleFontsize: 1.7rem;
-    --descriptionfontSize: 1.2rem;
+    --subTitleFontSize: 1.7rem;
+    --descriptionFontSize: 1.2rem;
     --cardTitleFontSize: 1.5rem;
-    --cardSubTitleFontsize: 1.3rem;
-    --cardDescriptionfontSize: 1.1rem;
+    --cardSubTitleFontSize: 1.3rem;
+    --carddescriptionFontSize: 1.1rem;
     --blockTitleFontSize: 1.4rem;
     --headerTitleFontSize: 2rem;
-    --headerDescriptionfontSize: 1.1rem;
+    --headerdescriptionFontSize: 1.1rem;
     --formLabelFontSize: 1rem;
     --buttonTitle: 1rem;
     --atTheRate: 1.5rem;
@@ -150,7 +140,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: var(--fabBoxShadow);
-  background: var(--primaryBackground);
+  background: var(--fabBackground);
   border-radius: 5rem;
 }
 
@@ -160,7 +150,7 @@ body {
 
 .fabSelected {
   box-shadow: none;
-  background-color: var(--theme);
+  background: var(--theme);
 }
 
 .contactContainer {
@@ -174,7 +164,7 @@ body {
 }
 
 .contactTitle {
-  font-size: var(--subTitleFontsize);
+  font-size: var(--subTitleFontSize);
   color: var(--primary);
 }
 
@@ -188,7 +178,7 @@ body {
 
 .contactSubText {
   color: var(--secondary);
-  font-size: var(--descriptionfontSize);
+  font-size: var(--descriptionFontSize);
   line-height: 25px;
   margin-top: 1rem;
 }
@@ -316,7 +306,7 @@ a {
   bottom: 40px;
   right: 0;
   height: 50px;
-  width: 60px;
+  width: 50px;
   z-index: 999;
 }
 
@@ -355,7 +345,7 @@ a {
 
 .notFoundText {
   color: var(--secondary);
-  font-size: var(--subTitleFontsize);
+  font-size: var(--subTitleFontSize);
   margin-top: 25px;
   padding: 0 15px;
 }
@@ -397,7 +387,7 @@ a {
 }
 
 .firstText {
-  font-size: var(--subTitleFontsize);
+  font-size: var(--subTitleFontSize);
 }
 
 .secondText {
@@ -424,7 +414,7 @@ a {
 }
 
 .bioText {
-  font-size: var(--descriptionfontSize);
+  font-size: var(--descriptionFontSize);
   color: var(--secondary);
   margin-top: 10px;
 }
@@ -478,8 +468,7 @@ a {
   top: 0;
   z-index: 1;
   background: var(--primaryBackground);
-  height: 50px;
-  padding: 1rem 0;
+  height: 60px;
   position: sticky;
   transition: 0.1s linear;
 }
@@ -490,7 +479,7 @@ a {
 }
 
 .scrollSegment {
-  font-size: var(--headerDescriptionfontSize);
+  font-size: var(--headerdescriptionFontSize);
   color: var(--primary);
   margin: 0 1rem;
   cursor: pointer;
@@ -533,7 +522,7 @@ a {
 
 .sharedSubTitle {
   position: relative;
-  font-size: var(--subTitleFontsize);
+  font-size: var(--subTitleFontSize);
   color: var(--primary);
   width: max-content;
   margin: auto;
@@ -567,7 +556,7 @@ a {
 .aboutMeDescription,
 .wrapUpDescription {
   margin-top: 1rem;
-  font-size: var(--descriptionfontSize);
+  font-size: var(--descriptionFontSize);
   line-height: 1.5;
 }
 
@@ -577,6 +566,60 @@ a {
 
 .wrapUpContactButton {
   margin: 0 0 0 20px !important;
+}
+
+.academicsItemContainer {
+  margin-top: 3rem;
+}
+
+.academicItem {
+  height: max-content;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.pathRing {
+  position: relative;
+  min-width: 5px;
+  background: var(--theme);
+}
+
+.pathRing::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: calc(50% - 15px);
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  border: 5px solid var(--theme);
+  background: var(--primaryBackground);
+}
+
+.academicInfoContainer {
+  padding: 1rem 0 0 2rem;
+}
+
+.academicField {
+  margin-bottom: 10px;
+  font-size: var(--cardTitleFontSize);
+  color: var(--primary);
+}
+
+.academicArea,
+.academicInstitution,
+.academicMarks {
+  margin-bottom: 10px;
+  font-size: var(--descriptionFontSize);
+}
+
+.marksStyle {
+  color: var(--primary);
+  font-size: var(--cardTitleFontSize);
+}
+
+.academicFromTo {
+  margin-bottom: 10px;
 }
 
 @keyframes typing {
@@ -987,12 +1030,13 @@ a {
   padding: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: var(--primary);
 }
 
 .gridItemStatsContainer {
   padding: 0 1rem 1rem;
-  font-size: var(--cardSubTitleFontsize);
-  color: var(--primary);
+  font-size: var(--cardSubTitleFontSize);
+  color: var(--secondary);
 }
 
 .gridStatTitleContainer {
@@ -1022,7 +1066,7 @@ a {
 
 .statPercentage {
   position: absolute;
-  font-size: var(--cardDescriptionfontSize);
+  font-size: var(--carddescriptionFontSize);
   color: var(--theme);
   right: 0;
   bottom: 5px;
@@ -1105,15 +1149,15 @@ a {
 }
 
 .certificateTitle {
-  font-size: var(--cardSubTitleFontsize);
-
+  font-size: var(--cardSubTitleFontSize);
   margin-bottom: 0.7rem;
   color: var(--primary);
 }
 
 .certificateIssuer {
-  font-size: var(--cardDescriptionfontSize);
+  font-size: var(--carddescriptionFontSize);
   margin-bottom: 2rem;
+  color: var(--secondary);
 }
 
 .viewCertificate {

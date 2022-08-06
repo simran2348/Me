@@ -29,10 +29,9 @@ function HomepageHeader({
           behavior: "smooth",
         });
       } else {
-        segment.scrollIntoView({
+        window.scrollTo({
+          top: segment.offsetTop - 200,
           behavior: "smooth",
-          inline: "nearest",
-          block: "center",
         });
       }
     }
