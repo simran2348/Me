@@ -1,18 +1,13 @@
 [data-theme="dark"] {
   --theme: #da5724;
-  --background: #1c1a1b;
-  --fabIconColor: #ffffff;
+  --primary: #ffffff;
+  --primaryBackground: #1c1a1b;
+  --primaryBackgroundTwo: #404040;
+  --primaryInput: #3e3e3e85;
+  --secondary: #a5a5a5;
+  --secondaryBackground: #140d0d;
+
   --fabBoxShadow: 6px 6px 13px #131112, -6px -6px 13px #252324;
-  --textColor: #ffffff;
-  --themeTextColor: #da5724;
-  --themeInput: #3e3e3e85;
-  --subtext: #a5a5a5;
-  --inputPlaceholder: #a5a5a5;
   --rippleColor: rgb(78, 78, 78);
-  --swiperBackground: #000000;
   --profilePicShadow: 0px 0px 0px 0px var(--theme);
-  --appToastBackground: rgb(54, 54, 54);
-  --appToastTextColor: #ffffff;
-  --coverPageBackground: #140d0d;
-  --lightColorShade: #a5a5a540;
 }

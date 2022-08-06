@@ -319,3 +319,14 @@ export const certificates = [
     background: "var(--microsoft)",
   },
 ];
+export const academicsJourney = [
+  {
+    id: 1,
+    field: "",
+    institution: "",
+    from: "",
+    to: "",
+    marks: "",
+    marksTitle: "",
+  },
+];

@@ -34,7 +34,6 @@
     #01a6f0 75%,
     #01a6f0 100%
   );
-  --lineHeight: 1.5;
   --titleFontSize: 2.7rem;
   --subTitleFontsize: 2rem;
   --descriptionfontSize: 1.2rem;
@@ -46,6 +45,7 @@
   --headerDescriptionfontSize: 1.1rem;
   --buttonTitle: 1.1rem;
   --formLabelFontSize: 1rem;
+  --atTheRate: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -61,6 +61,7 @@
     --headerDescriptionfontSize: 1.1rem;
     --formLabelFontSize: 1rem;
     --buttonTitle: 1rem;
+    --atTheRate: 1.5rem;
   }
 }
 
@@ -87,7 +88,7 @@ body {
 
 .container {
   margin: 0 auto;
-  color: var(--textColor);
+  color: var(--secondary);
   padding: 0 70px;
   min-height: 100%;
   max-width: 1100px;
@@ -101,7 +102,7 @@ body {
   margin: auto;
   padding: 0 50px;
   height: 100%;
-  color: var(--textColor);
+  color: var(--primary);
 }
 .coverContentContainer {
   display: flex;
@@ -118,15 +119,15 @@ body {
 }
 
 .appToast {
-  background: var(--appToastBackground) !important;
+  background: var(--primaryBackgroundTwo) !important;
 }
 
 .appToastBody {
-  color: var(--appToastTextColor);
+  color: var(--primary);
 }
 
 .themeBackground {
-  background-color: var(--background);
+  background-color: var(--primaryBackground);
 }
 
 .fabRouter {
@@ -149,12 +150,12 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: var(--fabBoxShadow);
-  background: var(--background);
+  background: var(--primaryBackground);
   border-radius: 5rem;
 }
 
 .fabIcon {
-  color: var(--background) !important;
+  color: var(--primaryBackground) !important;
 }
 
 .fabSelected {
@@ -174,7 +175,7 @@ body {
 
 .contactTitle {
   font-size: var(--subTitleFontsize);
-  color: var(--textColor);
+  color: var(--primary);
 }
 
 .contactForm {
@@ -182,11 +183,11 @@ body {
 }
 
 .themeText {
-  color: var(--themeTextColor);
+  color: var(--theme);
 }
 
 .contactSubText {
-  color: var(--subtext);
+  color: var(--secondary);
   font-size: var(--descriptionfontSize);
   line-height: 25px;
   margin-top: 1rem;
@@ -200,20 +201,20 @@ body {
 
 .formInput,
 .formInput:focus {
-  background-color: var(--themeInput);
+  background-color: var(--primaryInput);
   outline: none;
   border: none;
   border-radius: 1rem;
   height: 35px;
   margin-top: 5px;
-  color: var(--textColor);
+  color: var(--secondary);
   text-indent: 15px;
   letter-spacing: 1px;
 }
 
 .formTextarea,
 .formTextarea:focus {
-  background-color: var(--themeInput);
+  background-color: var(--primaryInput);
   outline: none;
   border: none;
   border-radius: 1rem;
@@ -223,17 +224,17 @@ body {
   max-width: 330px;
   min-height: 100px;
   padding: 10px 15px;
-  color: var(--textColor);
+  color: var(--secondary);
   text-indent: 10px;
   line-height: 20px;
 }
 
 .formTextarea::placeholder {
-  color: var(--inputPlaceholder);
+  color: var(--secondary);
 }
 
 .formLabel {
-  color: var(--subtext);
+  color: var(--primary);
   font-size: var(--formLabelFontSize);
 }
 
@@ -273,7 +274,7 @@ a {
 
 .buttonTheme {
   background-color: var(--theme);
-  color: var(--background);
+  color: var(--primaryBackground);
 }
 
 .ripple-button {
@@ -353,14 +354,14 @@ a {
 }
 
 .notFoundText {
-  color: var(--textColor);
+  color: var(--secondary);
   font-size: var(--subTitleFontsize);
   margin-top: 25px;
   padding: 0 15px;
 }
 
 .coverPage {
-  background-color: var(--coverPageBackground);
+  background-color: var(--secondaryBackground);
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -372,7 +373,7 @@ a {
 .liftoffButton {
   background: var(--theme);
   border-radius: 50%;
-  box-shadow: 0 0 0 0 rgb(218, 87, 36, 1);
+  box-shadow: 0 0 0 0 var(--primaryBackgroundTwo);
   height: 3rem;
   width: 3rem;
   transform: scale(1);
@@ -424,13 +425,13 @@ a {
 
 .bioText {
   font-size: var(--descriptionfontSize);
-  color: var(--subtext);
+  color: var(--secondary);
   margin-top: 10px;
 }
 
 .launchButtonText {
   margin-top: 1rem;
-  color: var(--subtext);
+  color: var(--secondary);
 }
 
 .typewriter {
@@ -465,8 +466,8 @@ a {
 .atTheRate {
   font-size: 2rem;
   text-decoration: none;
-
-  color: var(--subtext);
+  font-size: var(--atTheRate);
+  color: var(--secondary);
   margin-right: 5px;
 }
 
@@ -476,7 +477,7 @@ a {
   align-items: center;
   top: 0;
   z-index: 1;
-  background: var(--background);
+  background: var(--primaryBackground);
   height: 50px;
   padding: 1rem 0;
   position: sticky;
@@ -484,20 +485,20 @@ a {
 }
 
 .scrollSegmentFixed {
-  box-shadow: 0px 0px 15px -5px var(--subtext);
+  box-shadow: 0px 0px 15px -5px var(--primary);
   transition: 0.3s linear;
 }
 
 .scrollSegment {
   font-size: var(--headerDescriptionfontSize);
-  color: var(--subtext);
+  color: var(--primary);
   margin: 0 1rem;
   cursor: pointer;
 }
 
 .segmentSelected {
   transform: scale(1.2);
-  border-bottom: 3px solid var(--subtext);
+  border-bottom: 3px solid var(--primary);
   transition: 0.1s linear;
 }
 
@@ -517,15 +518,15 @@ a {
   left: 0;
   height: max-content;
   text-align: center;
-  color: var(--lightColorShade);
+  color: var(--primaryBackgroundTwo);
   padding: 2rem 0;
 }
 
 .sharedTitle {
   font-size: var(--titleFontSize);
-  color: var(--subtext);
+  color: var(--primary);
   width: 100%;
-  border-left: 5px solid var(--subtext);
+  border-left: 5px solid var(--primary);
   line-height: 50px;
   padding-left: 1rem;
 }
@@ -533,11 +534,11 @@ a {
 .sharedSubTitle {
   position: relative;
   font-size: var(--subTitleFontsize);
-  color: var(--subtext);
+  color: var(--primary);
   width: max-content;
   margin: auto;
-  border-left: 3px solid var(--subtext);
-  border-right: 3px solid var(--subtext);
+  border-left: 3px solid var(--primary);
+  border-right: 3px solid var(--primary);
   line-height: 50px;
   padding: 2px 10px 0;
   z-index: 0;
@@ -550,7 +551,7 @@ a {
   left: -1px;
   height: 3px;
   width: 46px;
-  background-color: var(--subtext);
+  background-color: var(--primary);
 }
 
 .sharedSubTitle::after {
@@ -560,7 +561,7 @@ a {
   right: -1px;
   height: 3px;
   width: 45px;
-  background-color: var(--subtext);
+  background-color: var(--primary);
 }
 
 .aboutMeDescription,
@@ -600,7 +601,7 @@ a {
 @keyframes pulse-black {
   0% {
     transform: scale(0.8);
-    box-shadow: 0 0 0 0 rgba(218, 87, 36, 0.7);
+    box-shadow: 0 0 0 0 var(--theme);
   }
 
   70% {
@@ -648,6 +649,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .sharedTitle {
+    line-height: px;
+  }
+
   .notFoundImage {
     width: 90%;
   }
@@ -663,12 +668,11 @@ a {
   }
 
   .headerFixed {
-    box-shadow: 0px 0px 15px -5px var(--subtext);
+    box-shadow: 0px 0px 15px -5px var(--primary);
     transition: 0.3s linear;
   }
 
   .sharedSubTitle {
-    font-size: var(--subTitleFontsize);
     line-height: 45px;
   }
 
@@ -680,32 +684,19 @@ a {
     margin: 2rem 0 !important;
   }
 
-  .sharedTitle {
-    font-size: var(--titleFontSize);
-  }
-
-  .aboutMeTitle {
-    line-height: 35px;
-  }
-
   .titleContainer {
     text-align: left;
   }
 
   .atTheRate {
-    font-size: 1.5rem;
     margin-left: 15px;
-  }
-
-  .headerTitle {
-    font-size: var(--headerTitleFontSize);
   }
 
   .headerContainer {
     padding: 11px 0;
     position: sticky;
     top: 0;
-    background: var(--background);
+    background: var(--primaryBackground);
   }
 
   .scrollToContainer {
@@ -757,7 +748,7 @@ a {
     top: 0;
     right: -250px;
     transition: 0.2s linear;
-    background-color: var(--swiperBackground);
+    background-color: var(--primaryBackgroundTwo);
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -773,9 +764,8 @@ a {
     width: 100%;
     height: 40px;
     place-items: center;
-    color: var(--themeTextColor);
+    color: var(--theme);
     padding-left: 25px;
-    font-size: var(--headerDescriptionfontSize);
   }
 
   .menuLinkSelected {
@@ -921,14 +911,6 @@ a {
     display: none;
   }
 
-  .secondText {
-    font-size: var(--titleFontSize);
-  }
-
-  .firstText {
-    font-size: var(--subTitleFontsize);
-  }
-
   .launchButtonText {
     text-align: center;
   }
@@ -995,7 +977,7 @@ a {
 .skillGridItem {
   width: 100%;
   height: 500px;
-  background-color: var(--lightColorShade);
+  background-color: var(--primaryBackgroundTwo);
   text-align: start;
   margin: auto;
 }
@@ -1010,7 +992,7 @@ a {
 .gridItemStatsContainer {
   padding: 0 1rem 1rem;
   font-size: var(--cardSubTitleFontsize);
-  color: var(--subtext);
+  color: var(--primary);
 }
 
 .gridStatTitleContainer {
@@ -1028,7 +1010,7 @@ a {
 .statbarContainer {
   width: 100%;
   height: 5px;
-  background-color: var(--lightColorShade);
+  background-color: var(--primaryBackground);
   position: relative;
   margin-bottom: 25px;
 }
@@ -1060,10 +1042,6 @@ a {
     height: max-content;
     border-radius: 0.5rem;
   }
-
-  .gridItemTitle {
-    font-size: var(--cardTitleFontSize);
-  }
 }
 
 /* Other Grids */
@@ -1092,15 +1070,6 @@ a {
   font-size: var(--blockTitleFontSize);
 }
 
-@media (max-width: 768px) {
-  .databaseTitle,
-  .hostingTitle,
-  .softwareTitle,
-  .versionTitle {
-    font-size: var(--blockTitleFontSize);
-  }
-}
-
 /* Certificate Grid*/
 .certificationGridContainer {
   display: grid;
@@ -1115,7 +1084,7 @@ a {
 .certificationGridItem {
   width: 100%;
   min-height: 200px;
-  background-color: var(--lightColorShade);
+  background-color: var(--primaryBackgroundTwo);
   text-align: start;
   margin: auto;
   display: flex;
@@ -1139,7 +1108,7 @@ a {
   font-size: var(--cardSubTitleFontsize);
 
   margin-bottom: 0.7rem;
-  color: var(--subtext);
+  color: var(--primary);
 }
 
 .certificateIssuer {
@@ -1166,9 +1135,5 @@ a {
     max-width: 500px;
     border-radius: 0.5rem;
     min-height: 160px;
-  }
-
-  .certificateTitle {
-    font-size: var(--cardSubTitleFontsize);
   }
 }

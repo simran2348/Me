@@ -1,18 +1,13 @@
 :root {
-  --theme: #da5724;
-  --background: #fcf5de;
-  --fabIconColor: #6b3c56;
+  --theme: #115566;
+  --primary: #559999;
+  --primaryInput: #d0ebdd9e;
+  --primaryBackground: #fbfbfb;
+  --primaryBackgroundTwo: #c0efef;
+  --secondary: #3c3c3c;
+  --secondaryBackground: #d0ebdd;
+
   --fabBoxShadow: 6px 6px 12px #e0dac6, -6px -6px 12px #fffff6;
-  --textColor: #565656;
-  --themeTextColor: #da5724;
-  --themeInput: #fbc37e5e;
-  --subtext: #6b3c56;
-  --inputPlaceholder: #da5724;
   --rippleColor: rgb(78, 78, 78);
-  --swiperBackground: #ffd3aa;
   --profilePicShadow: 0px 5px 15px -5px var(--theme);
-  --appToastBackground: #ffd3aa;
-  --appToastTextColor: #6b3c56;
-  --coverPageBackground: #ffecad;
-  --lightColorShade: #6b3c5640;
 }

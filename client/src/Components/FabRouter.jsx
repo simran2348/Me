@@ -23,7 +23,7 @@ function FabRouter({ isDark, toggleTheme, show }) {
         <AiFillHome
           size={23}
           className={`${pathname === "/" && "fabIcon"}`}
-          color="var(--fabIconColor)"
+          color="var(--primary)"
         />
       ),
       selected: pathname === "/",
@@ -35,7 +35,7 @@ function FabRouter({ isDark, toggleTheme, show }) {
         <MdMail
           size={23}
           className={`${pathname === "/contact-me" && "fabIcon"}`}
-          color="var(--fabIconColor)"
+          color="var(--primary)"
         />
       ),
       selected: pathname === "/contact-me",
@@ -47,7 +47,7 @@ function FabRouter({ isDark, toggleTheme, show }) {
         <FaInfo
           size={23}
           className={`${pathname === "/about" && "fabIcon"}`}
-          color="var(--fabIconColor)"
+          color="var(--primary)"
         />
       ),
       selected: pathname === "/about",
