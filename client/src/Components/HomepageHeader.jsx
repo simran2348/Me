@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { name, segments } from "../constants";
 
@@ -53,11 +54,12 @@ function HomepageHeader({
                 if (ref.current.id === segment.id) {
                   segment.selected = false;
                 }
-
-                setNavSegment(tempSegment);
+                return segment;
               });
+              setNavSegment(tempSegment);
             }
           }
+          return ref;
         });
       } else {
         const tempSegment = [...navsegment];
@@ -73,11 +75,13 @@ function HomepageHeader({
                 } else {
                   segment.selected = false;
                 }
+                return segment;
               });
 
               setNavSegment(tempSegment);
             }
           }
+          return ref;
         });
       }
 
