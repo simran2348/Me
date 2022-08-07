@@ -55,25 +55,21 @@
   }
 }
 
-.app {
-  min-height: 100vh;
-}
-
 html {
-  overflow-x: hidden;
-}
-
-.body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100vh;
-  width: 100vw;
+  overflow: hidden;
 }
 
 body {
   margin: 0px;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
+}
+
+.app {
+  background-color: var(--primaryBackground);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .container {
@@ -116,20 +112,16 @@ body {
   color: var(--primary);
 }
 
-.themeBackground {
-  background-color: var(--primaryBackground);
-}
-
 .fabRouter {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 99;
-  min-width: 74px;
+  width: 65px;
 }
 
 .fabIconContainer {
@@ -304,7 +296,7 @@ a {
 .themeController {
   position: fixed;
   bottom: 40px;
-  right: 0;
+  right: 15px;
   height: 50px;
   width: 50px;
   z-index: 999;
@@ -500,6 +492,22 @@ a {
   margin-top: 4rem;
 }
 
+.hobbyContainer {
+  margin-top: 2.5rem;
+}
+
+.hobbyTitle {
+  font-size: var(--cardTitleFontSize);
+  border-left: 5px solid var(--primary);
+  padding-left: 1rem;
+  color: var(--primary);
+}
+
+.hobbyItem {
+  font-size: var(--descriptionFontSize);
+  margin-top: 5px;
+}
+
 .footerContainer {
   position: relative;
   margin-top: 4rem;
@@ -575,7 +583,6 @@ a {
 .academicItem {
   height: max-content;
   display: flex;
-  margin-bottom: 1rem;
 }
 
 .pathRing {
@@ -587,7 +594,7 @@ a {
 .pathRing::before {
   position: absolute;
   content: "";
-  top: 10px;
+  top: 20px;
   right: calc(50% - 15px);
   height: 20px;
   width: 20px;
@@ -597,7 +604,7 @@ a {
 }
 
 .academicInfoContainer {
-  padding: 1rem 0 0 2rem;
+  padding: 1rem 0 1rem 2rem;
 }
 
 .academicField {
@@ -620,6 +627,10 @@ a {
 
 .academicFromTo {
   margin-bottom: 10px;
+}
+
+.fieldTitle {
+  line-height: 0;
 }
 
 @keyframes typing {
@@ -706,6 +717,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  .pathRing::before {
+    top: 17px;
+  }
+
   body {
     font-weight: 700;
   }
@@ -874,7 +889,7 @@ a {
   .fabRouterMobile {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 25px;
     z-index: 9999;
   }
 

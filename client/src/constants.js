@@ -40,6 +40,11 @@ export const email = "simranjits008@gmail.com";
 export const mobileNo = "+91-7982265035";
 export const bio =
   "An aspiring MERN stack developer, specializing in Front-End Development";
+export const hobbiesTitle = "Some of my hobbies";
+export const hobbies = [
+  "Avid cyclist, explorer and adventurer",
+  "I like to collect coins and bank notes from different countries",
+];
 export const launchButtonText = "Push the button to launch into my website";
 export const contactSubtext =
   "Have a job opportunity or want to talk, contact me directly and fill out the form, and i will get back to you soon.";
@@ -118,7 +123,7 @@ export const segments = [
 ];
 export const aboutMeTitle = "About Me";
 export const aboutMeDescription =
-  "Hello, my name is Simranjit Singh. I was Born and brought up in New Delhi";
+  "Hello, my name is Simranjit Singh. I was Born and brought up in New Delhi, India, currently living in Mumbai, India. I am working in Tata Consultancy Services as a Front End Developer. I am experienced in developing responsive web applications using React Js, aspiring to become a MERN stack developer.";
 export const academicsTitle = "My Academics Journey";
 export const certificationTitle = "Certificates I Accomplished";
 export const projectTitle = "My Projects";
@@ -333,7 +338,7 @@ export const academicsJourney = [
   },
   {
     id: 2,
-    field: "<span>XII<sup>th</sup></span>",
+    field: '<span class="fieldTitle">XII<sup>th</sup></span>',
     institution: "Guru Harkrishan Public School",
     city: "New Delhi",
     country: "India",
@@ -344,12 +349,12 @@ export const academicsJourney = [
   },
   {
     id: 3,
-    field: "<span>X<sup>th</sup></span>",
+    field: '<span class="fieldTitle">X<sup>th</sup></span>',
     institution: "S.S. Mota Singh Senior Secondary School",
     city: "New Delhi",
     country: "India",
-    from: "2013",
-    to: "2014",
+    from: "2012",
+    to: "2013",
     marks: "7.6",
     marksTitle: "CGPA",
   },

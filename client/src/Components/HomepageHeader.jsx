@@ -18,6 +18,7 @@ function HomepageHeader({
   const [navsegment, setNavSegment] = useState(segments);
 
   const scrollToSegment = (id) => {
+    const app = document.getElementById("app");
     const segment =
       id === "aboutMe"
         ? document.getElementById("header")
@@ -29,7 +30,7 @@ function HomepageHeader({
           behavior: "smooth",
         });
       } else {
-        window.scrollTo({
+        app.scrollTo({
           top: segment.offsetTop - 200,
           behavior: "smooth",
         });
@@ -38,13 +39,14 @@ function HomepageHeader({
   };
 
   useEffect(() => {
+    const app = document.getElementById("app");
     const handleScroll = (e) => {
-      if (window.scrollY < window.innerHeight) {
+      if (app.scrollTop < window.innerHeight) {
         const tempSegment = [...navsegment];
         refs.map((ref) => {
           if (ref) {
             if (
-              ref.current.offsetTop - window.scrollY <
+              ref.current.offsetTop - app.scrollTop <
               window.innerHeight / 2
             ) {
               tempSegment.map((segment) => {
@@ -62,7 +64,7 @@ function HomepageHeader({
         refs.map((ref) => {
           if (ref) {
             if (
-              ref.current.offsetTop - window.scrollY <
+              ref.current.offsetTop - app.scrollTop <
               window.innerHeight / 2
             ) {
               tempSegment.map((segment) => {
@@ -79,7 +81,7 @@ function HomepageHeader({
         });
       }
 
-      if (window.scrollY > window.innerHeight + 100.23) {
+      if (app.scrollTop > window.innerHeight + 100.23) {
         const scrollContainer = document.getElementById("scrollContainer");
         const header = document.getElementById("header");
         if (header) {
@@ -99,9 +101,9 @@ function HomepageHeader({
         }
       }
     };
-    window.addEventListener("scroll", handleScroll, false);
+    app.addEventListener("scroll", handleScroll, false);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      app.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

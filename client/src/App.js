@@ -40,7 +40,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div data-theme={isDark && "dark"} className="app themeBackground">
+      <div data-theme={isDark && "dark"} className="app" id="app">
         <Router>
           <FabRouter show={visible} isDark={isDark} toggleTheme={toggleTheme} />
           <AppRoutes visible={visible} handleVisibility={handleVisibility} />
