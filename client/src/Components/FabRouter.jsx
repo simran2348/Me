@@ -1,6 +1,5 @@
 import { AiFillHome } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
-import { FaInfo } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Hammer from "react-hammerjs";
@@ -39,18 +38,6 @@ function FabRouter({ isDark, toggleTheme, show }) {
         />
       ),
       selected: pathname === "/contact-me",
-    },
-    {
-      label: "Info",
-      path: "/about",
-      icon: (
-        <FaInfo
-          size={23}
-          className={`${pathname === "/about" && "fabIcon"}`}
-          color="var(--primary)"
-        />
-      ),
-      selected: pathname === "/about",
     },
   ];
 

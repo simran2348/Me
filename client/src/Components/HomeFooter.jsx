@@ -11,7 +11,7 @@ function HomeFooter() {
   return (
     <div className="footerContainer">
       <div>
-        <FaSlackHash size={50} color="var(--primaryBackgroundTwo)" />
+        <FaSlackHash size={50} color="var(--primary)" />
       </div>
       <div>{date}</div>
     </div>

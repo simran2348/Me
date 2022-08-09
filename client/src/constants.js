@@ -26,11 +26,16 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   AZ_900,
+  DevConnector,
+  FeedbackApp,
+  GithubFinder,
+  HouseMarketplace,
   Instagram,
   M001,
   MernStack,
   Mongoose,
   ReactFrontToBack,
+  SupportDesk,
 } from "./Assets";
 import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
@@ -357,5 +362,61 @@ export const academicsJourney = [
     to: "2013",
     marks: "7.6",
     marksTitle: "CGPA",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Dev Connector",
+    sumary:
+      "This is a small social network app that includes user authentication, profile creation and and allows users to create, delete posts and have interactions with other users.",
+    githubLink: "https://github.com/simran2348/Dev-Connector",
+    demoLink: "https://sheltered-caverns-96587.herokuapp.com/",
+    displayImage: DevConnector,
+  },
+  {
+    id: 2,
+    title: "Support Desk",
+    sumary:
+      "Support ticket application allowing users to create tickets, view them, add notes, and close their tickets.",
+    githubLink: "https://github.com/simran2348/Support-desk",
+    demoLink: "https://support-desk-1997.herokuapp.com/",
+    displayImage: SupportDesk,
+  },
+  {
+    id: 3,
+    title: "Github Finder",
+    sumary:
+      "React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management.",
+    githubLink: "https://github.com/simran2348/Github-finder",
+    demoLink: "https://github-finder-eight-ebon.vercel.app/",
+    displayImage: GithubFinder,
+  },
+  {
+    id: 4,
+    title: "Feedback App",
+    sumary:
+      "This app allows users to add, update and delete feedback. It uses a mock REST api with json-server.",
+    githubLink: "https://github.com/simran2348/Feedback-app",
+    demoLink: null,
+    displayImage: FeedbackApp,
+  },
+  {
+    id: 5,
+    title: "House Marketplace",
+    sumary:
+      "This is a React / Firebase v9 which helps user to find and list houses for sale or for rent. The design of this app is mobile first",
+    githubLink: "https://github.com/simran2348/House-marketplace",
+    demoLink: "https://house-marketplace-gamma-azure.vercel.app",
+    displayImage: HouseMarketplace,
+  },
+  {
+    id: 6,
+    title: "Simranjit Singh",
+    sumary: "This is My Website",
+    githubLink: "https://github.com/simran2348/Me",
+    demoLink: "",
+    displayImage: "",
   },
 ];

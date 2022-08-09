@@ -515,7 +515,7 @@ a {
   left: 0;
   height: max-content;
   text-align: center;
-  color: var(--primaryBackgroundTwo);
+  color: var(--primary);
   padding: 2rem 0;
 }
 
@@ -1166,7 +1166,7 @@ a {
 .certificateTitle {
   font-size: var(--cardSubTitleFontSize);
   margin-bottom: 0.7rem;
-  color: var(--primary);
+  color: var(--theme);
 }
 
 .certificateIssuer {
@@ -1176,7 +1176,7 @@ a {
 }
 
 .viewCertificate {
-  color: var(--theme);
+  color: var(--primary);
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -1194,5 +1194,45 @@ a {
     max-width: 500px;
     border-radius: 0.5rem;
     min-height: 160px;
+  }
+}
+
+/*Project*/
+.projectItemContainer {
+  margin-top: 3rem;
+}
+
+.projectItem {
+  display: flex;
+}
+
+.projectDisplayImageContainer {
+  width: 500px;
+  height: 500px;
+}
+
+.projectDisplayImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.projectItemInfo {
+  padding: 1rem;
+}
+
+.projectTitle {
+  font-size: var(--cardTitleFontSize);
+  color: var(--theme);
+}
+
+.projectSummary {
+  font-size: var(--descriptionFontSize);
+}
+
+@media (max-width: 768px) {
+  .projectItem {
+    display: block;
   }
 }
