@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import ThemeContext from "./Context/ThemeContext";
 import FabRouter from "./Components/FabRouter";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -11,6 +11,18 @@ import { ToastContainer } from "react-toastify";
 function App() {
   const { isDark, toggleTheme } = useContext(ThemeContext);
   const [visible, setVisible] = useState(false);
+  const aboutMeRef = useRef();
+  const academicsRef = useRef();
+  const certificationsRef = useRef();
+  const projectsRef = useRef();
+  const careerRef = useRef();
+  const refs = [
+    aboutMeRef,
+    academicsRef,
+    certificationsRef,
+    projectsRef,
+    careerRef,
+  ];
 
   const handleVisibility = () => {
     console.log("asdasd");
@@ -42,8 +54,17 @@ function App() {
     <Provider store={store}>
       <div data-theme={isDark && "dark"} className="app" id="app">
         <Router>
-          <FabRouter show={visible} isDark={isDark} toggleTheme={toggleTheme} />
-          <AppRoutes visible={visible} handleVisibility={handleVisibility} />
+          <FabRouter
+            show={visible}
+            isDark={isDark}
+            toggleTheme={toggleTheme}
+            refs={refs}
+          />
+          <AppRoutes
+            visible={visible}
+            handleVisibility={handleVisibility}
+            refs={refs}
+          />
         </Router>
         <ToastContainer
           position="top-left"

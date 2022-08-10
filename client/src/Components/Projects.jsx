@@ -7,7 +7,7 @@ function Projects({ projectsRef }) {
       <div className="sharedTitle">{projectTitle}</div>
       <div className="projectItemContainer">
         {projects.map((project) => (
-          <div className="projectItem">
+          <div className="projectItem" key={project.id}>
             <div className="projectDisplayImageContainer">
               <img
                 className="projectDisplayImage"

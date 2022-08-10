@@ -2,20 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { name, segments } from "../constants";
 
-function HomepageHeader({
-  aboutMeRef,
-  academicsRef,
-  certificationsRef,
-  projectsRef,
-  careerRef,
-}) {
-  const refs = [
-    aboutMeRef,
-    academicsRef,
-    certificationsRef,
-    projectsRef,
-    careerRef,
-  ];
+function HomepageHeader({ refs }) {
   const [navsegment, setNavSegment] = useState(segments);
 
   const scrollToSegment = (id) => {
