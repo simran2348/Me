@@ -135,7 +135,7 @@ export const projectTitle = "My Projects";
 export const careerTitle = "Here comes my Experience";
 export const WrapUpTitle = "Let's Wrap Up";
 export const WrapUpDescription =
-  "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume";
+  "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume.";
 export const WrapUpContactMessage =
   "Have something in mind, want to ask something...";
 export const skillsTitle = "Check out my skills";
@@ -369,7 +369,7 @@ export const projects = [
   {
     id: 1,
     title: "Dev Connector",
-    sumary:
+    summary:
       "This is a small social network app that includes user authentication, profile creation and and allows users to create, delete posts and have interactions with other users.",
     githubLink: "https://github.com/simran2348/Dev-Connector",
     demoLink: "https://sheltered-caverns-96587.herokuapp.com/",
@@ -378,7 +378,7 @@ export const projects = [
   {
     id: 2,
     title: "Support Desk",
-    sumary:
+    summary:
       "Support ticket application allowing users to create tickets, view them, add notes, and close their tickets.",
     githubLink: "https://github.com/simran2348/Support-desk",
     demoLink: "https://support-desk-1997.herokuapp.com/",
@@ -387,7 +387,7 @@ export const projects = [
   {
     id: 3,
     title: "Github Finder",
-    sumary:
+    summary:
       "React app to search Github profiles. This app uses the Context API along with the useContext and useReducer hooks for state management.",
     githubLink: "https://github.com/simran2348/Github-finder",
     demoLink: "https://github-finder-eight-ebon.vercel.app/",
@@ -396,7 +396,7 @@ export const projects = [
   {
     id: 4,
     title: "Feedback App",
-    sumary:
+    summary:
       "This app allows users to add, update and delete feedback. It uses a mock REST api with json-server.",
     githubLink: "https://github.com/simran2348/Feedback-app",
     demoLink: null,
@@ -405,18 +405,10 @@ export const projects = [
   {
     id: 5,
     title: "House Marketplace",
-    sumary:
+    summary:
       "This is a React / Firebase v9 which helps user to find and list houses for sale or for rent. The design of this app is mobile first",
     githubLink: "https://github.com/simran2348/House-marketplace",
     demoLink: "https://house-marketplace-gamma-azure.vercel.app",
     displayImage: HouseMarketplace,
-  },
-  {
-    id: 6,
-    title: "Simranjit Singh",
-    sumary: "This is My Website",
-    githubLink: "https://github.com/simran2348/Me",
-    demoLink: "",
-    displayImage: "",
   },
 ];

@@ -11,6 +11,7 @@ function RippleButton({
   path,
   download,
   downloadLabel,
+  icon,
 }) {
   function mousePositionToCustomProp(event, element) {
     let posX = event.offsetX;
@@ -38,32 +39,30 @@ function RippleButton({
     }
   });
 
-  return (
-    <div className={`submitButtonContainer ${align}`}>
-      {path ? (
-        <a
-          href={path}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`button buttonTheme ripple-button ${buttonClass}`}
-          download={download && downloadLabel}
-          disabled={disabled}
-          id={id}
-        >
-          {label}
-        </a>
-      ) : (
-        <button
-          className={`button buttonTheme ripple-button ${buttonClass}`}
-          type={type}
-          disabled={disabled}
-          id={id}
-          onClick={handleClick}
-        >
-          {label}
-        </button>
-      )}
-    </div>
+  return path ? (
+    <a
+      href={path}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`button buttonTheme ripple-button ${buttonClass}`}
+      download={download && downloadLabel}
+      disabled={disabled}
+      id={id}
+    >
+      {icon}
+      {label}
+    </a>
+  ) : (
+    <button
+      className={`button buttonTheme ripple-button ${buttonClass}`}
+      type={type}
+      disabled={disabled}
+      id={id}
+      onClick={handleClick}
+    >
+      {icon}
+      {label}
+    </button>
   );
 }
 

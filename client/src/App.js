@@ -25,7 +25,6 @@ function App() {
   ];
 
   const handleVisibility = () => {
-    console.log("asdasd");
     setVisible(true);
     localStorage.setItem("website", true);
 
