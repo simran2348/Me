@@ -36,6 +36,7 @@ import {
   Mongoose,
   ReactFrontToBack,
   SupportDesk,
+  TCS,
 } from "./Assets";
 import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
@@ -410,5 +411,49 @@ export const projects = [
     githubLink: "https://github.com/simran2348/House-marketplace",
     demoLink: "https://house-marketplace-gamma-azure.vercel.app",
     displayImage: HouseMarketplace,
+  },
+];
+export const careerExperience = [
+  {
+    companyName: "Tata Consultancy Services",
+    companyLogo: <TCS size={50} />,
+    from: "September, 2019",
+    to: "Present",
+    experience: [
+      {
+        teamName: "TDL TechOps Air Asia India",
+        teamTitle: "System Engineer - Developer",
+        from: "September, 2021",
+        to: "Present",
+        keyPoints: [
+          "Member of the development and user interface designing team for the B2C, B2B web app.",
+          "Successfully created responsive components and deployed them on AEM(Adobe Experience Manager) and received 'Appreciation Note' for leading AEM integration.",
+          "Recieved 'Appriciation Note' for creating custom calender component on client demand.",
+          "Implemented React-Redux for state management and API handling.",
+          "Analysed server logs on Azure Application Insights and handled incidents on ServiceNow.",
+        ],
+      },
+      {
+        teamName: "TDL TechOps SSO",
+        teamTitle: "System Engineer - Developer",
+        from: "July, 2020",
+        to: "August, 2021",
+        keyPoints: [
+          "Member of the development team and technical support lead for the project.",
+          "Handled incidents regarding user login/sign-in errors, user queries, database irregularities, bugs arising in production.",
+          "Worked on Azure Application Insights and Grafana Dashboards to analyse production and QA environment logs and telemetry giving better understanding of when error arises during user login/signup flow.",
+        ],
+      },
+      {
+        teamName: "Tata Digital",
+        teamTitle: "Associate System Engineer",
+        from: "November, 2019",
+        to: "June, 2020",
+        keyPoints: [
+          "Created a tool called “Admin Panel”, which allowed Tata SSO clients to design, customize their login gateway screens, and see the real time output of their screens.",
+          "Implemented React Table with pagination, which stored SSO client data allowing clients to add, update and delete their data.",
+        ],
+      },
+    ],
   },
 ];

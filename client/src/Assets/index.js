@@ -13,6 +13,7 @@ import feedbackApp from "./feedbackApp.JPG";
 import githubFinder from "./githubFinder.JPG";
 import houseMarketplace from "./houseMarketplace.JPG";
 import supportDesk from "./supportDesk.JPG";
+import tcs from "./tcs";
 
 export const MoonImage = moonImage;
 export const SunImage = sunImage;
@@ -29,3 +30,4 @@ export const FeedbackApp = feedbackApp;
 export const GithubFinder = githubFinder;
 export const HouseMarketplace = houseMarketplace;
 export const SupportDesk = supportDesk;
+export const TCS = tcs;

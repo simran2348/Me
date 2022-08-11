@@ -667,7 +667,7 @@ a {
 .academicField {
   margin-bottom: 10px;
   font-size: var(--cardTitleFontSize);
-  color: var(--primary);
+  color: var(--theme);
 }
 
 .academicArea,
@@ -1330,4 +1330,60 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*Career*/
+.careerItemContainer {
+  margin-top: 3rem;
+}
+
+.companyName {
+  font-size: var(--subTitleFontSize);
+}
+
+.companyFromTo {
+  font-size: var(--descriptionFontSize);
+}
+
+.companyLogoContainer {
+  display: block;
+}
+
+.companyLogo {
+  display: inline-flex;
+}
+
+.companySubItemContainer {
+  margin-top: 1rem;
+}
+
+.companySubItem {
+  display: flex;
+  height: max-content;
+}
+
+.experienceInfoContainer {
+  padding: 1rem 0 1rem 2rem;
+}
+
+.teamName {
+  font-size: var(--cardTitleFontSize);
+  color: var(--theme);
+}
+
+.teamTitle {
+  font-size: var(--cardSubTitleFontSize);
+}
+
+.experienceFromTo {
+  margin-top: 5px;
+  font-size: var(--formLabelFontSize);
+}
+
+.experiancePoint {
+  line-height: 1.5;
+}
+
+.experienceItemContainer {
+  padding-inline-start: 25px;
 }
