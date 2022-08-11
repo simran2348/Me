@@ -101,7 +101,7 @@ body {
 }
 
 .appToastContainer {
-  z-index: 0 !important;
+  z-index: 999 !important;
 }
 
 .appToast {

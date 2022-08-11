@@ -24,7 +24,7 @@ function WrapUp() {
         type="button"
         id={"downloadResume"}
         path={Resume}
-        download={true}
+        download={false}
         downloadLabel="Simranjit_Singh"
       />
       <div className="wrapUpContactContainer">
