@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { RESET_CONTACT_STATE } from "../Middleware/ActionTypes";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Spinner from "../Shared/Spinner";
 
 function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
   const dispatch = useDispatch();
@@ -53,49 +54,52 @@ function ContactMe({ sendMessage, isLoading, isSuccess, isError }) {
 
   const { name, email, message } = formData;
   return (
-    <div className="contactContainer">
-      <div className="contactTitle">
-        Let's <span className="themeText">Talk</span>
+    <>
+      {isLoading && <Spinner />}
+      <div className="contactContainer">
+        <div className="contactTitle">
+          Let's <span className="themeText">Talk</span>
+        </div>
+        <div className="contactSubText">{contactSubtext}</div>
+        <form onSubmit={onSubmit} className="contactForm">
+          <TextInput
+            type="text"
+            value={name}
+            name="name"
+            onChange={(e) => onChange(e)}
+            className=""
+            label="Your Name"
+            labelClass=""
+          />
+          <TextInput
+            type="email"
+            value={email}
+            name="email"
+            onChange={(e) => onChange(e)}
+            className=""
+            label="Your Email"
+            labelClass=""
+          />
+          <TextInput
+            value={message}
+            name="message"
+            onChange={(e) => onChange(e)}
+            className=""
+            label="Your Message"
+            labelClass=""
+            placeholder="Type your message here..."
+            textarea
+          />
+          <RippleButton
+            disabled={isLoading}
+            type="submit"
+            label="Send Message"
+            align={"justifyStart"}
+            id={"contactMe"}
+          />
+        </form>
       </div>
-      <div className="contactSubText">{contactSubtext}</div>
-      <form onSubmit={onSubmit} className="contactForm">
-        <TextInput
-          type="text"
-          value={name}
-          name="name"
-          onChange={(e) => onChange(e)}
-          className=""
-          label="Your Name"
-          labelClass=""
-        />
-        <TextInput
-          type="email"
-          value={email}
-          name="email"
-          onChange={(e) => onChange(e)}
-          className=""
-          label="Your Email"
-          labelClass=""
-        />
-        <TextInput
-          value={message}
-          name="message"
-          onChange={(e) => onChange(e)}
-          className=""
-          label="Your Message"
-          labelClass=""
-          placeholder="Type your message here..."
-          textarea
-        />
-        <RippleButton
-          disabled={isLoading}
-          type="submit"
-          label="Send Message"
-          align={"justifyStart"}
-          id={"contactMe"}
-        />
-      </form>
-    </div>
+    </>
   );
 }
 

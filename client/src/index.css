@@ -1290,3 +1290,44 @@ a {
     display: block;
   }
 }
+
+/*Spinner*/
+.loaderBackdrop {
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000e6;
+}
+
+.loaderSpinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.loaderSpinner:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid var(--theme);
+  border-color: var(--theme) transparent var(--theme) transparent;
+  animation: loaderSpinner 1.2s linear infinite;
+}
+@keyframes loaderSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
