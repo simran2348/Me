@@ -562,10 +562,9 @@ a {
   margin-top: 4rem;
   width: 100%;
   left: 0;
-  height: max-content;
+  height: 160px;
   text-align: center;
   color: var(--primary);
-  padding: 2rem 0;
 }
 
 .sharedTitle {
@@ -1274,12 +1273,8 @@ a {
   line-height: 1.5;
 }
 
-.projectActions {
-  margin-top: 2rem;
-}
-
 .projectActionButton {
-  margin: 0 10px 0 0;
+  margin: 2rem 10px 0 0;
   display: inline-flex !important;
   padding: 10px !important;
 }

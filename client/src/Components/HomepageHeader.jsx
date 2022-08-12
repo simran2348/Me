@@ -19,7 +19,7 @@ function HomepageHeader({ refs }) {
         });
       } else {
         app.scrollTo({
-          top: segment.offsetTop - 200,
+          top: segment.offsetTop - 100,
           behavior: "smooth",
         });
       }
