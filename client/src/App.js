@@ -18,10 +18,10 @@ function App() {
   const careerRef = useRef();
   const refs = [
     aboutMeRef,
+    careerRef,
     academicsRef,
     certificationsRef,
     projectsRef,
-    careerRef,
   ];
 
   const handleVisibility = () => {

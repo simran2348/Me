@@ -8,6 +8,6 @@
   --secondaryBackground: #d0ebdd;
   --fabBoxShadow: -5px 5px 10px #d9d9d9, 5px -5px 10px #ffffff;
   --fabBackground: linear-gradient(225deg, #e6e6e6, #ffffff);
-  --rippleColor: rgb(78, 78, 78);
+  --rippleColor: rgb(179, 179, 179);
   --profilePicShadow: 0px 5px 15px -5px var(--theme);
 }

@@ -139,7 +139,6 @@ body {
 .fabIcon {
   color: var(--primaryBackground) !important;
 }
-
 .fabSelected {
   box-shadow: none;
   background: var(--theme);
@@ -284,13 +283,6 @@ a {
 
 .pulse::before {
   animation: pulse 500ms;
-}
-
-.fabRouterMobile,
-.backdrop,
-.swiperArea,
-.swiper {
-  display: none;
 }
 
 .themeController {
@@ -584,7 +576,6 @@ a {
   line-height: 50px;
   padding-left: 1rem;
 }
-
 .sharedSubTitle {
   position: relative;
   font-size: var(--subTitleFontSize);
@@ -690,6 +681,33 @@ a {
   line-height: 0;
 }
 
+.socialLinksCoverPage {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.socialLinkItemCover {
+  margin-right: 1rem;
+}
+
+.swiper {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  transition: 0.2s linear;
+  background-color: var(--primaryBackgroundTwo);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiperVisible {
+  right: 0;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -774,6 +792,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  .socialLinksCoverPage {
+    display: none;
+  }
+
   .pathRing::before {
     top: 17px;
   }
@@ -831,12 +853,6 @@ a {
     display: none;
   }
 
-  .fabRouterMobile,
-  .backdrop,
-  .swiperArea {
-    display: block;
-  }
-
   .swiperArea {
     width: 30px;
     position: fixed;
@@ -853,24 +869,7 @@ a {
     top: 0;
     left: 0;
     backdrop-filter: brightness(0.5) blur(3px);
-    z-index: 999;
-  }
-
-  .swiper {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    transition: 0.2s linear;
-    background-color: var(--primaryBackgroundTwo);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .swiperVisible {
-    right: 0;
+    z-index: 998;
   }
 
   .themeControllerMobile {

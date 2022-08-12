@@ -1,6 +1,6 @@
 import React from "react";
-import { ProfileImage } from "../Assets";
-import { bio, greeting, launchButtonText, name } from "../constants";
+import { Instagram, ProfileImage } from "../Assets";
+import { bio, greeting, launchButtonText, name, socials } from "../constants";
 import Typewriter from "../Shared/Typewriter";
 
 function CoverPage({ handleVisibility }) {
@@ -13,6 +13,27 @@ function CoverPage({ handleVisibility }) {
               <div className="firstText">{greeting}</div>
               <Typewriter label={name} class="secondText" />
               <div className="bioText">{bio}</div>
+              <div className="socialLinksCoverPage">
+                {socials.map((item) => {
+                  return (
+                    item.link !== null && (
+                      <a
+                        key={item.id}
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="socialLinkItemCover"
+                      >
+                        {item.label === "Instagram" ? (
+                          <Instagram size={30} />
+                        ) : (
+                          item.icon
+                        )}
+                      </a>
+                    )
+                  );
+                })}
+              </div>
             </div>
             <div className="liftoffContainer">
               <button

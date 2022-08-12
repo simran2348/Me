@@ -30,7 +30,6 @@ import {
   FeedbackApp,
   GithubFinder,
   HouseMarketplace,
-  Instagram,
   M001,
   MernStack,
   Mongoose,
@@ -61,13 +60,12 @@ export const socials = [
     id: 1,
     label: "Facebook",
     link: null,
-    icon: <AiFillFacebook fill="var(--facebook)" size={35} />,
+    icon: <AiFillFacebook fill="var(--facebook)" size={33} />,
   },
   {
     id: 2,
     label: "Instagram",
     link: "https://www.instagram.com/simranjits_97/",
-    icon: <Instagram size={33} />,
   },
   {
     id: 3,
@@ -107,6 +105,11 @@ export const segments = [
     selected: false,
   },
   {
+    id: "career",
+    label: "Career",
+    selected: false,
+  },
+  {
     id: "academics",
     label: "Academics",
     selected: false,
@@ -119,11 +122,6 @@ export const segments = [
   {
     id: "projects",
     label: "Projects",
-    selected: false,
-  },
-  {
-    id: "career",
-    label: "Career",
     selected: false,
   },
 ];

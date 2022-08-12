@@ -17,10 +17,10 @@ function Homepage({ handleVisibility, visible, refs }) {
           <HomepageHeader refs={refs} />
           <div className="container">
             <AboutMe aboutMeRef={refs[0]} />
-            <Acadamics academicsRef={refs[1]} />
-            <Certifications certificationsRef={refs[2]} />
-            <Projects projectsRef={refs[3]} />
-            <Career careerRef={refs[4]} />
+            <Career careerRef={refs[1]} />
+            <Acadamics academicsRef={refs[2]} />
+            <Certifications certificationsRef={refs[3]} />
+            <Projects projectsRef={refs[4]} />
             <WrapUp />
             <HomeFooter />
           </div>
