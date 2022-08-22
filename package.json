@@ -21,6 +21,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
+    "googleapis": "^107.0.0",
     "mongoose": "^6.0.12",
     "nodemailer": "^6.7.6"
   },
