@@ -18,7 +18,7 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({
   refresh_token: process.env.OAUTH_REFRESH_TOKEN,
 });
-const accessToken = oauth2Client.getAccessToken();
+// const accessToken = oauth2Client.getAccessToken();
 
 let transporter = nodemailer.createTransport({
   service: "gmail",
@@ -28,16 +28,16 @@ let transporter = nodemailer.createTransport({
     pass: process.env.PASSWORD,
     clientId: process.env.OAUTH_CLIENTID,
     clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-    accessToken: accessToken,
+    // refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+    // accessToken: accessToken,
   },
 });
 
-transporter.verify((err, success) => {
-  err
-    ? console.log(err)
-    : console.log(`=== Server is ready to take messages: ${success} ===`);
-});
+// transporter.verify((err, success) => {
+//   err
+//     ? console.log(err)
+//     : console.log(`=== Server is ready to take messages: ${success} ===`);
+// });
 
 //@route    GET api/contact
 //@access   Public
@@ -81,15 +81,19 @@ router.post(
         text: `Email: ${email}, Message: ${message}`,
       };
 
-      transporter.sendMail(mailOptions, async function (err, data) {
-        if (err) {
-          console.log("Error " + err);
-        } else {
-          await contact.save();
+      await contact.save();
 
-          res.status(200).send("Message sent successfully");
-        }
-      });
+      res.status(200).send("Message sent successfully");
+
+      // transporter.sendMail(mailOptions, async function (err, data) {
+      //   if (err) {
+      //     console.log("Error " + err);
+      //   } else {
+      //     await contact.save();
+
+      //     res.status(200).send("Message sent successfully");
+      //   }
+      // });
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");

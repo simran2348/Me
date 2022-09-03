@@ -41,8 +41,6 @@ import resume from "./Assets/SimranjitSingh_Resume.pdf";
 
 export const greeting = "Hello, I am";
 export const name = "Simranjit Singh";
-export const email = "simranjits008@gmail.com";
-export const mobileNo = "+91-7982265035";
 export const bio =
   "An aspiring MERN stack developer, specializing in Front-End Development";
 export const hobbiesTitle = "Some of my hobbies";
@@ -134,7 +132,7 @@ export const projectTitle = "My Projects";
 export const careerTitle = "Here comes my Experience";
 export const WrapUpTitle = "Let's Wrap Up";
 export const WrapUpDescription =
-  "Hi Stranger, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume.";
+  "Hi There, Thank's for spending time on my website and looking through my work. If you want an in-depth of my experience, kindly go through my resume.";
 export const WrapUpContactMessage =
   "Have something in mind, want to ask something...";
 export const skillsTitle = "Check out my skills";
