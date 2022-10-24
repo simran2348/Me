@@ -417,27 +417,16 @@ export const careerExperience = [
     to: "Present",
     experience: [
       {
-        teamName: "TDL TechOps Air Asia India",
-        teamTitle: "System Engineer - Developer",
-        from: "September, 2021",
+        teamName: "Technicle Operations - Tata Digital",
+        teamTitle: "System Engineer",
+        from: "July, 2020",
         to: "Present",
         keyPoints: [
-          "Member of the development and user interface designing team for the B2C, B2B web app.",
-          "Successfully created responsive components and deployed them on AEM(Adobe Experience Manager) and received 'Appreciation Note' for leading AEM integration.",
-          "Recieved 'Appriciation Note' for creating custom calender component on client demand.",
-          "Implemented React-Redux for state management and API handling.",
-          "Analysed server logs on Azure Application Insights and handled incidents on ServiceNow.",
-        ],
-      },
-      {
-        teamName: "TDL TechOps SSO",
-        teamTitle: "System Engineer - Developer",
-        from: "July, 2020",
-        to: "August, 2021",
-        keyPoints: [
-          "Member of the development team and technical support lead for the project.",
-          "Handled incidents regarding user login/sign-in errors, user queries, database irregularities, bugs arising in production.",
-          "Worked on Azure Application Insights and Grafana Dashboards to analyse production and QA environment logs and telemetry giving better understanding of when error arises during user login/signup flow.",
+          "Contributed to the development of Air Asia India B2C and B2B, responsive web application.",
+          "Got appreciated by the delivery manager for facilitating the development of customized calendar on specific client demand.",
+          "Introduced various customized React hooks, hence optimizing the code thus leading to better performance.",
+          "Excelled in developing responsive web pages and overseeing the CSS and media queries, for which got awarded by team lead.",
+          "Collaborated with peers in handling the bugs arising in the production environment and solving them before their specified response SLA's for smooth user experience.",
         ],
       },
       {
@@ -446,8 +435,9 @@ export const careerExperience = [
         from: "November, 2019",
         to: "June, 2020",
         keyPoints: [
-          "Created a tool called “Admin Panel”, which allowed Tata SSO clients to design, customize their login gateway screens, and see the real time output of their screens.",
-          "Implemented React Table with pagination, which stored SSO client data allowing clients to add, update and delete their data.",
+          "Collaborated with Tata Digital team responsible for handling internal development projects.",
+          "Created a responsive web tool called “Admin Panel”, which allowed Tata SSO clients to design, customise their Auth/login screens, and see the real time output of their screens.",
+          "Developed custom table in Admin Panel with pagination, which stored SSO client data allowing users to handle CRUD operations.",
         ],
       },
     ],
